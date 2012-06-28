@@ -1,4 +1,4 @@
-gitsetup
+gitsetup.exe
 ========
 
-Setup for Git for Windows
+Setup for Git on Windows.
