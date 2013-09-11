@@ -20,6 +20,7 @@
     </Component>
 
     <ComponentGroupRef Id='GitComponents'/>
+    <ComponentGroupRef Id='GitFlowComponents'/>
   </Feature>
 </Product>
 
