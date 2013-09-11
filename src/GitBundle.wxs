@@ -1,8 +1,11 @@
 <?xml version='1.0'?>
-<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi' xmlns:bal='http://schemas.microsoft.com/wix/BalExtension'>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
+     xmlns:bal='http://schemas.microsoft.com/wix/BalExtension'
+     xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
 <Bundle Name='!(bind.packageName.git.msi)' Manufacturer='!(bind.packageManufacturer.git.msi)'
         Version='!(bind.packageVersion.git.msi)' UpgradeCode='4adb169f-377b-4a52-b817-4ecee51fe64d'
-        IconSourceFile='git.ico'>
+        IconSourceFile='git.ico'
+        dep:ProviderKey='GitSetupBundle'>
 
   <BootstrapperApplicationRef Id='WixStandardBootstrapperApplication.HyperlinkLicense'>
     <bal:WixStandardBootstrapperApplication LicenseUrl='http://www.opensource.org/licenses/gpl-2.0' LogoFile='git.png' />
