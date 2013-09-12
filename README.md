@@ -7,5 +7,5 @@ gitsetup.exe is a Burn Bundle (see the [WiX toolset](http://wixtoolset.org/)) th
 
 Also includes:
 
-* [git-flow](https://github.com/nvie/gitflow) - A collection of Git extensions to provide high-level repository operations for Vincent Driessen's [branching model](http://nvie.com/git-model "original
-blog post").
+* [git-flow](https://github.com/nvie/gitflow) - GitFlow is a collection of Git extensions to provide high-level repository operations for Vincent Driessen's [branching model](http://nvie.com/git-model).
+* [git-credential-winstore](http://gitcredentialstore.codeplex.com/) - Windows Credential Store for Git is a small helper app designed to follow the git credentials API as defined by the [Git Documentation](https://github.com/gitster/git-htmldocs/blob/master/technical/api-credentials.txt).
