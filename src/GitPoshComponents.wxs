@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <ComponentGroup Id="GitPoshComponents" Directory="GitPoshFolder">
+            <Component>
+                <File Source="posh-git\CheckVersion.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\GitPrompt.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\GitTabExpansion.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\GitUtils.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\install.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\LICENSE.txt" />
+            </Component>
+            <Component>
+                <File Source="posh-git\posh-git.psm1" />
+                <Environment Id='UpdatePSModulePath' Name='PSModulePath' Value='[GitPowershellModulesFolder]' Action='set' Part='last' System='yes' />
+            </Component>
+            <Component>
+                <File Source="posh-git\profile.example.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\readme.md" />
+            </Component>
+            <Component>
+                <File Source="posh-git\TortoiseGit.ps1" />
+            </Component>
+            <Component>
+                <File Source="posh-git\Utils.ps1" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+
+    <Fragment>
+        <DirectoryRef Id='INSTALLFOLDER'>
+            <Directory Id='GitPowershellFolder' Name='Powershell'>
+                <Directory Id='GitPowershellModulesFolder' Name='Modules'>
+                    <Directory Id='GitPoshFolder' Name='posh-git' />
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

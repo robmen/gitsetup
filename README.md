@@ -19,3 +19,6 @@ Driessen's [branching model](http://nvie.com/git-model).
 * [git-credential-winstore](http://gitcredentialstore.codeplex.com/) - Windows
 Credential Store for Git is a small helper app designed to follow the git
 credentials API as defined by the [Git Documentation](https://github.com/gitster/git-htmldocs/blob/master/technical/api-credentials.txt).
+
+* [posh-git](https://github.com/dahlbyk/posh-git) - Posh-git is a set of
+PowerShell scripts which provide Git/PowerShell integration.
