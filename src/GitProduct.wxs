@@ -1,35 +1,35 @@
 <?xml version='1.0'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
      xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
-<Product Id='*' Name='Git on Windows' Language='1033' Manufacturer='RobMensching.com LLC'
-                Version='!(bind.fileVersion.fil5C1B2C7A3DD12792819E6707E7478542)'
-                UpgradeCode='abbb3e1d-fea0-4b84-9585-b4dc13cbc1b4'>
-  <Package InstallScope='perMachine' Compressed='yes' />
+  <Product Id='*' Name='Git on Windows' Language='1033' Manufacturer='RobMensching.com LLC'
+                  Version='!(bind.fileVersion.fil5C1B2C7A3DD12792819E6707E7478542)'
+                  UpgradeCode='abbb3e1d-fea0-4b84-9585-b4dc13cbc1b4'>
+    <Package InstallScope='perMachine' Compressed='yes' />
 
-  <MajorUpgrade DowngradeErrorMessage='A newer version of [ProductName] is already installed.' />
-  <Media Id='1' Cabinet='git.cab' CompressionLevel='high' />
+    <MajorUpgrade DowngradeErrorMessage='A newer version of [ProductName] is already installed.' />
+    <Media Id='1' Cabinet='git.cab' CompressionLevel='high' />
 
-  <Feature Id='Git'>
-    <Component Directory='INSTALLFOLDER'>
-      <RegistryValue Root='HKLM' Key='Software\Git' Name='InstallFolder' Value='[INSTALLFOLDER]' Type='string' />
-      <Environment Id='UpdatePath' Name='PATH' Value='[dir64FF3155E20E57A6382D3CDE88CED198]' Action='set' Part='last' System='yes' />
-    </Component>
+    <Feature Id='Git'>
+      <Component Directory='INSTALLFOLDER'>
+        <RegistryValue Root='HKLM' Key='Software\Git' Name='InstallFolder' Value='[INSTALLFOLDER]' Type='string' />
+        <Environment Id='UpdatePath' Name='PATH' Value='[dir64FF3155E20E57A6382D3CDE88CED198]' Action='set' Part='last' System='yes' />
+      </Component>
 
-    <Component Directory='INSTALLFOLDER'>
-      <dep:Provides Key='GetSetupPackage' />
-    </Component>
+      <Component Directory='INSTALLFOLDER'>
+        <dep:Provides Key='GetSetupPackage' />
+      </Component>
 
-    <ComponentGroupRef Id='GitComponents'/>
-    <ComponentGroupRef Id='GitCredStoreComponents'/>
-    <ComponentGroupRef Id='GitFlowComponents'/>
-  </Feature>
-</Product>
+      <ComponentGroupRef Id='GitComponents'/>
+      <ComponentGroupRef Id='GitCredStoreComponents'/>
+      <ComponentGroupRef Id='GitFlowComponents'/>
+    </Feature>
+  </Product>
 
-<Fragment>
-  <Directory Id='TARGETDIR' Name='SourceDir'>
-    <Directory Id='ProgramFilesFolder' Name='PFiles'>
-      <Directory Id='INSTALLFOLDER' Name='Git' />
+  <Fragment>
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+      <Directory Id='ProgramFilesFolder' Name='PFiles'>
+        <Directory Id='INSTALLFOLDER' Name='Git' />
+      </Directory>
     </Directory>
-  </Directory>
-</Fragment>
+  </Fragment>
 </Wix>
