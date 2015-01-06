@@ -2637,6 +2637,9 @@
             <Component Id="cmp3A4F90D3BDDA937A65111DA5A022A1D5" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
                 <File Id="fil1DB9A6CE453ECA8CD44137F2E393EC71" KeyPath="yes" Source="SourceDir\etc\inputrc" />
             </Component>
+            <Component Id="cmp66E54A61B36E5E5B4EC44EEACAF97160" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
+                <File Id="fil1F919529C81E7DE0B373265D0140776D" KeyPath="yes" Source="SourceDir\etc\motd" />
+            </Component>
             <Component Id="cmpB7CEE28D96BE3650C2AD53F48C3198F3" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
                 <File Id="fil5BE8D99AD1D0CEB3E6E9AB4D7030C232" KeyPath="yes" Source="SourceDir\etc\profile" />
             </Component>
@@ -10022,9 +10025,6 @@
             </Component>
             <Component Id="cmp7BA7D1D37C12EFC8D28D2160D45B97A0" Directory="dir03364C466DED32748599743CFE5C0040" Guid="*">
                 <File Id="filAB5086A3C0BF9ED4B0A8AEE88A3D7250" KeyPath="yes" Source="SourceDir\share\gitk\lib\msgs\sv.msg" />
-            </Component>
-            <Component Id="cmp5B74562BE5FF742F8AEEE825D50FF2BF" Directory="dir03364C466DED32748599743CFE5C0040" Guid="*">
-                <File Id="fil4B7F30A7B96C72CF111F717EB15BC1D6" KeyPath="yes" Source="SourceDir\share\gitk\lib\msgs\vi.msg" />
             </Component>
             <Component Id="cmp6703D3E4E70397AE9D8A5625250B28F6" Directory="dir23AF44A79917F10D5AFEBB681A2A8DEE" Guid="*">
                 <File Id="fil19951580DA7D5C489E91BACCE5EE2E2F" KeyPath="yes" Source="SourceDir\share\gitweb\gitweb.cgi" />
