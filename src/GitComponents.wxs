@@ -375,6 +375,9 @@
             <Component Id="cmp92194D682C330D29A658C21BF103D1AA" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
                 <File Id="fil9AC585F1D5143C1917E8E6E2312EF7AA" KeyPath="yes" Source="SourceDir\bin\sh.exe" />
             </Component>
+            <Component Id="cmp4D797F9EAED8E5244FF4D634DF5F1E65" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
+                <File Id="fil046BA4884173073A5CBD5426613A766E" KeyPath="yes" Source="SourceDir\bin\sh.VisualElementsManifest.xml" />
+            </Component>
             <Component Id="cmpFD7C3A459E38EB3E89D843A996E95754" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
                 <File Id="fil36E86981D09778356A1C5AB6704C465A" KeyPath="yes" Source="SourceDir\bin\sleep.exe" />
             </Component>
@@ -464,6 +467,9 @@
             </Component>
             <Component Id="cmp55178B48978C9D02C11ECC0B8E7309C6" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
                 <File Id="filDC81CFB7E3DA09D362D1D3244DC2D35C" KeyPath="yes" Source="SourceDir\bin\wish.exe" />
+            </Component>
+            <Component Id="cmp3E74BE42F589E0ACB156A45224BB9841" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
+                <File Id="fil020BACF99E2EC41415DFECF18D26CFDF" KeyPath="yes" Source="SourceDir\bin\wish.VisualElementsManifest.xml" />
             </Component>
             <Component Id="cmp1A65C0C1A9C999EA7B3896A856212F27" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
                 <File Id="fil47BC1D54D18F8864F8160F94841472AD" KeyPath="yes" Source="SourceDir\bin\wish85.exe" />
@@ -2793,6 +2799,9 @@
             <Component Id="cmp936E3A0816800CDBD5525C6021DEE7FE" Directory="dirD55AE73C2030F344D7184D2D0C85FE03" Guid="*">
                 <File Id="fil6F7CC7C9D5B4C2AC55E624E9F3AA6F24" KeyPath="yes" Source="SourceDir\lib\perl5\5.8.8\Dumpvalue.pm" />
             </Component>
+            <Component Id="cmp34AE8D4FF25185DFAB0CEF18F6E46055" Directory="dirD55AE73C2030F344D7184D2D0C85FE03" Guid="*">
+                <File Id="filB4BF571FB6E31A1935C1E45BF08C2B17" KeyPath="yes" Source="SourceDir\lib\perl5\5.8.8\dumpvar.pl" />
+            </Component>
             <Component Id="cmp104E96DA5065CA8EB7318C21CAA9B240" Directory="dirD55AE73C2030F344D7184D2D0C85FE03" Guid="*">
                 <File Id="fil510620D4B548B6AC2B1E276FD8F27DB8" KeyPath="yes" Source="SourceDir\lib\perl5\5.8.8\English.pm" />
             </Component>
@@ -2843,6 +2852,9 @@
             </Component>
             <Component Id="cmp92B9C658B656061A02BE3838D159B691" Directory="dirD55AE73C2030F344D7184D2D0C85FE03" Guid="*">
                 <File Id="fil3798862A26EE5D39998ECC13432C1623" KeyPath="yes" Source="SourceDir\lib\perl5\5.8.8\overload.pm" />
+            </Component>
+            <Component Id="cmp4EB517D54BDED2625FC2684A0021FC41" Directory="dirD55AE73C2030F344D7184D2D0C85FE03" Guid="*">
+                <File Id="fil10FE9508752DCEEF989B5BD4B4351F6D" KeyPath="yes" Source="SourceDir\lib\perl5\5.8.8\perl5db.pl" />
             </Component>
             <Component Id="cmp2FD7A2C9421E43CE38E3192AA18C7560" Directory="dirD55AE73C2030F344D7184D2D0C85FE03" Guid="*">
                 <File Id="fil8C623868579D59F4F916049DF6F1DC20" KeyPath="yes" Source="SourceDir\lib\perl5\5.8.8\PerlIO.pm" />
@@ -10025,6 +10037,9 @@
             </Component>
             <Component Id="cmp7BA7D1D37C12EFC8D28D2160D45B97A0" Directory="dir03364C466DED32748599743CFE5C0040" Guid="*">
                 <File Id="filAB5086A3C0BF9ED4B0A8AEE88A3D7250" KeyPath="yes" Source="SourceDir\share\gitk\lib\msgs\sv.msg" />
+            </Component>
+            <Component Id="cmp5B74562BE5FF742F8AEEE825D50FF2BF" Directory="dir03364C466DED32748599743CFE5C0040" Guid="*">
+                <File Id="fil4B7F30A7B96C72CF111F717EB15BC1D6" KeyPath="yes" Source="SourceDir\share\gitk\lib\msgs\vi.msg" />
             </Component>
             <Component Id="cmp6703D3E4E70397AE9D8A5625250B28F6" Directory="dir23AF44A79917F10D5AFEBB681A2A8DEE" Guid="*">
                 <File Id="fil19951580DA7D5C489E91BACCE5EE2E2F" KeyPath="yes" Source="SourceDir\share\gitweb\gitweb.cgi" />
