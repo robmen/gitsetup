@@ -2,7 +2,7 @@
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
      xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
   <Product Id='*' Name='Git on Windows' Language='1033' Manufacturer='RobMensching.com LLC'
-                  Version='1.9.5.50319'
+                  Version='1.9.51'
                   UpgradeCode='abbb3e1d-fea0-4b84-9585-b4dc13cbc1b4'>
     <Package InstallScope='perMachine' Compressed='yes' />
 
