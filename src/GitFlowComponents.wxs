@@ -41,6 +41,9 @@
                 <File Source="gitflow_dependencies\getopt.exe" />
             </Component>
             <Component>
+                <File Source="gitflow_dependencies\libiconv2.dll" />
+            </Component>
+            <Component>
                 <File Source="gitflow_dependencies\libintl3.dll" />
             </Component>
         </ComponentGroup>
