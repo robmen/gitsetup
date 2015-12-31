@@ -3,7 +3,7 @@
      xmlns:bal='http://schemas.microsoft.com/wix/BalExtension'
      xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
 <Bundle Name='!(bind.packageName.git.msi)' Manufacturer='!(bind.packageManufacturer.git.msi)'
-        Version='1.9.5.50319' UpgradeCode='4adb169f-377b-4a52-b817-4ecee51fe64d'
+        Version='2.6.4.32' UpgradeCode='4adb169f-377b-4a52-b817-4ecee51fe64d'
         IconSourceFile='git.ico'
         dep:ProviderKey='GitSetupBundle'>
 
