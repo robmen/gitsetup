@@ -1,0 +1,10 @@
+version: 1.0.{build}
+
+build:
+
+  verbosity: normal
+  
+os: Windows Server 2012
+
+install:
+ - cmd: make.bat
