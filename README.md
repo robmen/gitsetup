@@ -22,3 +22,8 @@ Driessen's [branching model](http://nvie.com/git-model).
 
 * [posh-git](https://github.com/dahlbyk/posh-git) - Posh-git is a set of
 PowerShell scripts which provide Git/PowerShell integration.
+
+
+Current status:
+
+[![Build status](https://ci.appveyor.com/api/projects/status/6s25qrwshkyjgq55?svg=true)](https://ci.appveyor.com/project/bleissem/gitsetup)
