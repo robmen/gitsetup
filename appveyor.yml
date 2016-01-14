@@ -7,4 +7,11 @@ build:
 os: Windows Server 2012
 
 install:
+ - echo downloading portable git for windows
+ - ps:Invoke-WebRequest "https://github.com/git-for-windows/git/releases/download/v2.7.0.windows.1/PortableGit-2.7.0-64-bit.7z.exe" -OutFile "C:\projects\gitsetup\"
+ - echo extracting
+ - 7z x -o "C:\projects\gitsetup\src\portable" "C:\projects\gitsetup\PortableGit-2.7.0-64-bit.7z.exe"
+ - echo call harvest
+ - cmd: harvest.cmd
+ - echo call make.bat
  - cmd: make.bat
