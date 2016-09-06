@@ -4,6 +4,7 @@
         <DirectoryRef Id="INSTALLFOLDER">
             <Directory Id="dir7307A6085BD4ABD9B8955C093FD541F5" Name="bin" />
             <Directory Id="dir64FF3155E20E57A6382D3CDE88CED198" Name="cmd" />
+            <Directory Id="dirFE802926A150A53BA637098E317C9191" Name="dev" />
             <Directory Id="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Name="etc" />
             <Directory Id="dir3936764FC3AD0BB82C8965A7B52B7E51" Name="mingw32" />
             <Directory Id="dir2798F3B5FB07523517BA64A489D63A03" Name="usr" />
@@ -11,6 +12,18 @@
     </Fragment>
     <Fragment>
         <ComponentGroup Id="GitComponents">
+            <Component Id="cmp9CEDAB557ACE5DFBE4DBBBDE278357DC" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filAB5FF6D6253B358AA063DEDF1B58DBD7" KeyPath="yes" Source="SourceDir\git-bash.exe" />
+            </Component>
+            <Component Id="cmp7BB4CCF7CAAF64CB8EDA7CF8A0A77F2F" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filEABF7E13B0CA9F9C7FD81F1484864E73" KeyPath="yes" Source="SourceDir\git-cmd.exe" />
+            </Component>
+            <Component Id="cmp945A6D3121864473F7460C5DC8455427" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filBFDE95D1B0A63DB02F02094212B0A507" KeyPath="yes" Source="SourceDir\LICENSE.txt" />
+            </Component>
+            <Component Id="cmpB8A21CD67B9FD5E838FC1821EB99965D" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil4232A210F2899F33F19D5067479080C2" KeyPath="yes" Source="SourceDir\README.portable" />
+            </Component>
             <Component Id="cmp31D7661E98C644644A284A7A4623BCC3" Directory="dir7307A6085BD4ABD9B8955C093FD541F5" Guid="*">
                 <File Id="filCE3C5D8A3BE4D739B0E4AAC0C96E16E0" KeyPath="yes" Source="SourceDir\bin\bash.exe" />
             </Component>
@@ -38,6 +51,12 @@
             <Component Id="cmp46FD57FC8017AF5E9A4BA8AC1C77D35D" Directory="dir64FF3155E20E57A6382D3CDE88CED198" Guid="*">
                 <File Id="fil6C2C31F81F3AA8076F81F8E83495EA5F" KeyPath="yes" Source="SourceDir\cmd\start-ssh-agent.cmd" />
             </Component>
+            <Component Id="cmpD3E3BC8E29241DBA07EB5421648603D4" Directory="dir64FF3155E20E57A6382D3CDE88CED198" Guid="*">
+                <File Id="fil67757032E0AE7365A26653216CEC5BC1" KeyPath="yes" Source="SourceDir\cmd\start-ssh-pageant.cmd" />
+            </Component>
+            <Component Id="cmp2B9A91A23BFD1B64C471706C349B7A1F" Directory="dirFE802926A150A53BA637098E317C9191" Guid="*">
+                <File Id="filF9551D3EC6B4A5E18C3ED059D7D2E866" KeyPath="yes" Source="SourceDir\dev\fd" />
+            </Component>
             <Component Id="cmpCE72404717A2E2A1E51EAF37C7C0303F" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
                 <File Id="fil16CAB4ADFDDCD2CF0560249387A7C559" KeyPath="yes" Source="SourceDir\etc\bash.bashrc" />
             </Component>
@@ -58,6 +77,9 @@
             </Component>
             <Component Id="cmp3A4F90D3BDDA937A65111DA5A022A1D5" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
                 <File Id="fil1DB9A6CE453ECA8CD44137F2E393EC71" KeyPath="yes" Source="SourceDir\etc\inputrc" />
+            </Component>
+            <Component Id="cmpEDF06AE62CA5CD22A7F1CFC4CFCBEC67" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
+                <File Id="filC52FBC1CA826FA533EC5391FB3C791AC" KeyPath="yes" Source="SourceDir\etc\mtab" />
             </Component>
             <Component Id="cmpF4FFC60F93EBF63093D4440C717E01BC" Directory="dirF00D5F9BBC7F2C9ECA3FAF0F742E454A" Guid="*">
                 <File Id="fil7264C09C74C5AC60168A3F2C2235553B" KeyPath="yes" Source="SourceDir\etc\networks" />
@@ -254,6 +276,9 @@
             <Component Id="cmp2C375CBCE8A2A4425514D90A724B728C" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil0A33A2ECD0F7FBD444458ED9C3F0F6A0" KeyPath="yes" Source="SourceDir\mingw32\bin\libgcc_s_dw2-1.dll" />
             </Component>
+            <Component Id="cmp6F92968A41958711E6931E7E8CCB8F8C" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="filF186B4C42DEB0206FAD66BBB185B5D68" KeyPath="yes" Source="SourceDir\mingw32\bin\libgfortran-3.dll" />
+            </Component>
             <Component Id="cmpC246AECF1DCFDDBB4F77554DB8E2208A" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil1251B6482E803C6C531300A5D87DB3D4" KeyPath="yes" Source="SourceDir\mingw32\bin\libgmp-10.dll" />
             </Component>
@@ -266,11 +291,8 @@
             <Component Id="cmp4DD6759DDA5ADFA1C6F0393530F64A97" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil87B5BE4290BC35B7CBC28AFB18517E57" KeyPath="yes" Source="SourceDir\mingw32\bin\libgomp-1.dll" />
             </Component>
-            <Component Id="cmp75BC6E9A75582A9242D18481C0111B9C" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
-                <File Id="filCCF9B42AE87D3BA9BE40165AE9EF72B0" KeyPath="yes" Source="SourceDir\mingw32\bin\libgomp-plugin-host_nonshm-1.dll" />
-            </Component>
-            <Component Id="cmpD7F0C4228F7A593777BD45CBC370204C" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
-                <File Id="fil72B03294D5094AFA2977A6B53486EB3D" KeyPath="yes" Source="SourceDir\mingw32\bin\libhogweed-4-1.dll" />
+            <Component Id="cmpFF4F48C22FB573F3D83301126CFC697A" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="filE1C61D10A143165C96316772432CB259" KeyPath="yes" Source="SourceDir\mingw32\bin\libhogweed-4-2.dll" />
             </Component>
             <Component Id="cmp8C8B7B3398CDA631E17482F1AF9CAB9D" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="filDEAA6AFA2C8CE966FD4847E53DA4C993" KeyPath="yes" Source="SourceDir\mingw32\bin\libiconv-2.dll" />
@@ -284,11 +306,23 @@
             <Component Id="cmp44E93B4A226985085819864DE821DC74" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil2144E56275A59B4E43213D6E22C3A3C3" KeyPath="yes" Source="SourceDir\mingw32\bin\libintl-8.dll" />
             </Component>
+            <Component Id="cmp35A4E95689300AC009AEDD4C9C4EBDE1" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="fil178187F12C7B9DEFBD06111CB720FA6B" KeyPath="yes" Source="SourceDir\mingw32\bin\libitm-1.dll" />
+            </Component>
+            <Component Id="cmpE39FF09377DBD9BD6B873878DCD6CDE7" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="filF51C61D9C8EDA979D4899E9E002CEEFA" KeyPath="yes" Source="SourceDir\mingw32\bin\libjansson-4.dll" />
+            </Component>
+            <Component Id="cmpB13D203C9BFB543210575217E5553822" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="fil1F749196C919F5D299D507069CDAB328" KeyPath="yes" Source="SourceDir\mingw32\bin\libmetalink-3.dll" />
+            </Component>
             <Component Id="cmp955559F5C5A92901BDBA505B1A41325F" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="filB3EA97BFC48775E26377612DD9B02622" KeyPath="yes" Source="SourceDir\mingw32\bin\libminizip-1.dll" />
             </Component>
-            <Component Id="cmp61AABA1F5C370AC536CDE2E11DFAB89A" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
-                <File Id="fil368175B4195544B3A0752A98313D1334" KeyPath="yes" Source="SourceDir\mingw32\bin\libnettle-6-1.dll" />
+            <Component Id="cmp4D5A0E4146E78C171277851DD2B7B93B" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="fil9A134D1A0E495F596A0A5F37C67015A1" KeyPath="yes" Source="SourceDir\mingw32\bin\libnettle-6-2.dll" />
+            </Component>
+            <Component Id="cmp80B727B19FBE1EACF7B65B2363BEBBAF" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="fil2830CE09CB44068BF44E096456BFE93B" KeyPath="yes" Source="SourceDir\mingw32\bin\libnghttp2-14.dll" />
             </Component>
             <Component Id="cmp5DB4B59513961C51EB970A73B0622769" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil4D7E159C93D6AD5E1035D69A550FDE1E" KeyPath="yes" Source="SourceDir\mingw32\bin\libp11-kit-0.dll" />
@@ -350,6 +384,9 @@
             <Component Id="cmpFF8ADE2A49CE201BAB428814342BC8B4" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil06269C50B17BCC83A7C644A866237E44" KeyPath="yes" Source="SourceDir\mingw32\bin\sexp-conv.exe" />
             </Component>
+            <Component Id="cmp6EDF94A811302D6FE5B7BEA4EB83F9EA" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
+                <File Id="fil7D0CFD0B83504A121F20F95E3B95EB3D" KeyPath="yes" Source="SourceDir\mingw32\bin\sqlite3_analyzer.sh" />
+            </Component>
             <Component Id="cmpEA9092BDE3EE9824D332F57EA6B75A58" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="filED173CA5D463CBDF65470E282405C678" KeyPath="yes" Source="SourceDir\mingw32\bin\srptool.exe" />
             </Component>
@@ -388,6 +425,12 @@
             </Component>
             <Component Id="cmpD4882BC50F2DEDFC5FA87974A3FACEE1" Directory="dir55B8A8A105E7FE2F4764CB41FE52C60D" Guid="*">
                 <File Id="fil93C2C3E5F939D268717E8E88C545E232" KeyPath="yes" Source="SourceDir\mingw32\bin\zlib1.dll" />
+            </Component>
+            <Component Id="cmp1788A87DECC977FA549EFC415AFE0BF6" Directory="dir7D2C678BF4790EE003F85B2EED5EAB74" Guid="*">
+                <File Id="fil260B0E9A981D2CF28CC68C22B442810E" KeyPath="yes" Source="SourceDir\mingw32\doc\git-credential-manager\LICENSE.txt" />
+            </Component>
+            <Component Id="cmp137BB2764CE9C64BB0FD7D92A50EF969" Directory="dir7D2C678BF4790EE003F85B2EED5EAB74" Guid="*">
+                <File Id="filED5B47CEB08BE936CAE129DB0650BDCF" KeyPath="yes" Source="SourceDir\mingw32\doc\git-credential-manager\README.md" />
             </Component>
             <Component Id="cmp4BB647047C25418F56EE7EE3AA7F283C" Directory="dirF5ECA15B102CCA202BB0BC135E59D406" Guid="*">
                 <File Id="filAD376E6783A44D3772E34EC1BB286107" KeyPath="yes" Source="SourceDir\mingw32\etc\gitattributes" />
@@ -461,23 +504,23 @@
             <Component Id="cmp68B3B5DBE7BB254FCF520B2C00096B71" Directory="dir91314660C3F6F7B63714F596EF8E2493" Guid="*">
                 <File Id="fil99C99BC6FDEB12CE349F54DE79B43F08" KeyPath="yes" Source="SourceDir\mingw32\lib\engines\ubseceay32.dll" />
             </Component>
-            <Component Id="cmp4B06BF10BBD89708E72A70AE149CCC10" Directory="dir50921CF13D7C50C8948DAC41E790A026" Guid="*">
-                <File Id="filB6B05D00A71F9A57E1C958409C06475C" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.3\itcl.tcl" />
+            <Component Id="cmpFAB9E4DB39CED97E01D8819774C71780" Directory="dir5197CFBCE5C3ED3393B91F0778173B9F" Guid="*">
+                <File Id="filF16C382C6E427EB2EA7AC8AF20AD6DE3" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.4\itcl.tcl" />
             </Component>
-            <Component Id="cmp48437B2B649E4B3916B66097A0964FAC" Directory="dir50921CF13D7C50C8948DAC41E790A026" Guid="*">
-                <File Id="fil23D4DF448E56229161B216D764E5A2ED" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.3\itcl403.dll" />
+            <Component Id="cmpC7B63937CC977A84ED1C979E7A27524D" Directory="dir5197CFBCE5C3ED3393B91F0778173B9F" Guid="*">
+                <File Id="fil0C710E72C71A393C282244791CFC710F" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.4\itcl404.dll" />
             </Component>
-            <Component Id="cmp504749B4D2978AAFCABC2047ECB1DEDF" Directory="dir50921CF13D7C50C8948DAC41E790A026" Guid="*">
-                <File Id="fil5E196726A3D4C36DB7EA6385012E3756" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.3\itclConfig.sh" />
+            <Component Id="cmp666D8A2C7CEAD37671EEE390C0859211" Directory="dir5197CFBCE5C3ED3393B91F0778173B9F" Guid="*">
+                <File Id="fil32CD0EFE646DB7079747385F6A8921D5" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.4\itclConfig.sh" />
             </Component>
-            <Component Id="cmp25F48E66056AF47C38F7D91AF266CC04" Directory="dir50921CF13D7C50C8948DAC41E790A026" Guid="*">
-                <File Id="filB3A2561184E94FA6C9D9C4CB23B64F2A" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.3\itclHullCmds.tcl" />
+            <Component Id="cmpC030F4E99A05CCF0E4BD684AEA8A4BCF" Directory="dir5197CFBCE5C3ED3393B91F0778173B9F" Guid="*">
+                <File Id="fil10BD82931D04ADD89264AC0C718CFBE1" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.4\itclHullCmds.tcl" />
             </Component>
-            <Component Id="cmpEFAC0DC150FD8076EFE1B53CDE81460D" Directory="dir50921CF13D7C50C8948DAC41E790A026" Guid="*">
-                <File Id="fil726C217BCEE769F56CD5172EF938683E" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.3\itclWidget.tcl" />
+            <Component Id="cmpE9D3234FB4DAE46164D8F6E7788AD4CF" Directory="dir5197CFBCE5C3ED3393B91F0778173B9F" Guid="*">
+                <File Id="filE93B43F0E4033BC03BCF5DCBE7AD4825" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.4\itclWidget.tcl" />
             </Component>
-            <Component Id="cmpF4EB075D077474E7438276E75105D94C" Directory="dir50921CF13D7C50C8948DAC41E790A026" Guid="*">
-                <File Id="fil2B960285D001EAAD6363ECDE5BA92A77" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.3\pkgIndex.tcl" />
+            <Component Id="cmp829F0D2627D13CAEB64EF92783E5EEF8" Directory="dir5197CFBCE5C3ED3393B91F0778173B9F" Guid="*">
+                <File Id="fil13D8A19CB2DB7CC1576AF0DA4C04137D" KeyPath="yes" Source="SourceDir\mingw32\lib\itcl4.0.4\pkgIndex.tcl" />
             </Component>
             <Component Id="cmp29C6C936321FDBE2BE211BACE9E2DE78" Directory="dir2FF5E03B4EEE46D11A30152BD723B897" Guid="*">
                 <File Id="fil3FBFCBD5EEFF43DBD7AEF10E4AC6D319" KeyPath="yes" Source="SourceDir\mingw32\lib\p11-kit\p11-kit-extract-trust" />
@@ -497,32 +540,32 @@
             <Component Id="cmp66C82A195A780ED88FD2967CCB03F441" Directory="dir57AB4D9AD4304BF2A37072CFE79DBD58" Guid="*">
                 <File Id="filF6B160B8343F1C388673794B21DBCB6C" KeyPath="yes" Source="SourceDir\mingw32\lib\reg1.3\tclreg13.dll" />
             </Component>
-            <Component Id="cmp31BBFF29BF54C9C523BAC54E7256C2CD" Directory="dir458C1FF221BC21730858B202BE2083ED" Guid="*">
-                <File Id="filE0E74680E0897D6F59BDB23BF386E6C6" KeyPath="yes" Source="SourceDir\mingw32\lib\sqlite3.8.8.3\pkgIndex.tcl" />
+            <Component Id="cmp1AAD0A50147BABDBB59CF698FE1A6809" Directory="dir390BED454B30C10499631C5CBFBA41AE" Guid="*">
+                <File Id="fil6335EF22FF56996C436B271BD85EA808" KeyPath="yes" Source="SourceDir\mingw32\lib\sqlite3.11.0\pkgIndex.tcl" />
             </Component>
-            <Component Id="cmp5B334D8AD141666D51E2A47DC73C6E88" Directory="dir458C1FF221BC21730858B202BE2083ED" Guid="*">
-                <File Id="fil0A72FBC5204EE77852188323A47A8424" KeyPath="yes" Source="SourceDir\mingw32\lib\sqlite3.8.8.3\sqlite3883.dll" />
+            <Component Id="cmpE821C75A7AB58557336243C916C57AF3" Directory="dir390BED454B30C10499631C5CBFBA41AE" Guid="*">
+                <File Id="filA04A6A37919F2C0FF1EF157A9B2EF51D" KeyPath="yes" Source="SourceDir\mingw32\lib\sqlite3.11.0\sqlite3110.dll" />
             </Component>
             <Component Id="cmpA6C2565E7685A2DEF3A9D3154D0C4DB1" Directory="dirB7F778B5E6E60ECBF60F831D1DF59AB8" Guid="*">
                 <File Id="fil900A778239F05D3C91AB4FF2BCBC4629" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\tclConfig.sh" />
             </Component>
-            <Component Id="cmp32119FD9E645CEE85671F2889C8DA698" Directory="dirA10D406C6ADA69DD171A8923796DA202" Guid="*">
-                <File Id="fil550419870FA537ECB80E3F24E5D1603F" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.4\platform-1.0.13.tm" />
+            <Component Id="cmpAD94ABFADB18CDA293B130C1AD524000" Directory="dirA10D406C6ADA69DD171A8923796DA202" Guid="*">
+                <File Id="fil85363BEB60D644521359277BA6CB768A" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.4\platform-1.0.14.tm" />
             </Component>
             <Component Id="cmp0F537964DCD70EB359BCFE88078AAE5C" Directory="dirC75FBED1CF34A9997F644904E3256FD4" Guid="*">
                 <File Id="fil756677AA0D44CDDE941BA26750569BFE" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.4\platform\shell-1.1.4.tm" />
             </Component>
-            <Component Id="cmp43612E039D9FAE5EFF6F23C3E69A36B0" Directory="dirFDC3AB08B80120227541C1FDDAFB203B" Guid="*">
-                <File Id="fil5FDE74FD95E08A96FE47089539814D55" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.5\msgcat-1.5.2.tm" />
+            <Component Id="cmp728A5D2ED09CE1B6B93C2649E15487D7" Directory="dirFDC3AB08B80120227541C1FDDAFB203B" Guid="*">
+                <File Id="filD71D611EA8412BAAC36AB23BE84F22E3" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.5\msgcat-1.6.0.tm" />
             </Component>
             <Component Id="cmp46DE69146690A812A8810D04ADF1F2C0" Directory="dirFDC3AB08B80120227541C1FDDAFB203B" Guid="*">
                 <File Id="fil21FC23156F58B04761C9C1A0B0F912FF" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.5\tcltest-2.3.8.tm" />
             </Component>
-            <Component Id="cmpB37538035ABCC3BF9B5CE58744AAD176" Directory="dirF8AF61D223B466C69D3C2BDA790FE380" Guid="*">
-                <File Id="filA648913E27704128C7A22FAE5234DC94" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.6\http-2.8.8.tm" />
+            <Component Id="cmp555CFA8F6DE315D4DD09A6C8129893A0" Directory="dirF8AF61D223B466C69D3C2BDA790FE380" Guid="*">
+                <File Id="filB1DB0F66BDD7B81050950CCE8E9F8378" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.6\http-2.8.9.tm" />
             </Component>
-            <Component Id="cmpB177DADCB2B302040447A253D5EE84E9" Directory="dir5ECE08F9490D731E32D662CE5EDB0BD2" Guid="*">
-                <File Id="fil68C23804B50A468C58A99DC6C086AA03" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.6\tdbc\sqlite3-1.0.3.tm" />
+            <Component Id="cmpECE624562F2E69ED3D1FF15E02D6D5AF" Directory="dir5ECE08F9490D731E32D662CE5EDB0BD2" Guid="*">
+                <File Id="filCD31F629CD48650FD4EB4E7809E70BDD" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8\8.6\tdbc\sqlite3-1.0.4.tm" />
             </Component>
             <Component Id="cmpB2962BDD4B8DFFD6DC24BC4CCA0EA2CF" Directory="dir3D692B48E9E95CD3EC0CC4BB1BC1DA41" Guid="*">
                 <File Id="fil76B840C53ED0E5E0FE43E66C7D329126" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8.6\auto.tcl" />
@@ -1609,6 +1652,9 @@
             </Component>
             <Component Id="cmp9775BBE46353FB7B99B7AEA0E18728BD" Directory="dirA77A6C59AF11ADBFEEBA3F2CC14DD121" Guid="*">
                 <File Id="fil971901FDAA31461EE254F2526D0FB91D" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8.6\tzdata\America\Fortaleza" />
+            </Component>
+            <Component Id="cmp65296033EBEB7D2EFC2FAB166A1342DB" Directory="dirA77A6C59AF11ADBFEEBA3F2CC14DD121" Guid="*">
+                <File Id="fil26BCF737657CE0212ACEA2F75B99BC70" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8.6\tzdata\America\Fort_Nelson" />
             </Component>
             <Component Id="cmpA9F1A307D47D9E34863DBF63D632A535" Directory="dirA77A6C59AF11ADBFEEBA3F2CC14DD121" Guid="*">
                 <File Id="fil5ECA45FA432FA92FA9A4598F72463663" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8.6\tzdata\America\Fort_Wayne" />
@@ -2966,14 +3012,14 @@
             <Component Id="cmpADCD312B66802EB8A9C8A2B46EA32366" Directory="dir6BFE7B9FA4253275CA2E7C769343F744" Guid="*">
                 <File Id="fil69BB9D5FCEF9EFF7E8FDB7D93069295A" KeyPath="yes" Source="SourceDir\mingw32\lib\tcl8.6\tzdata\US\Samoa" />
             </Component>
-            <Component Id="cmp0336C1D50F72FDB398BEDD27DBE0141F" Directory="dir8287DAB4EA426C52EB89DBCB3B783702" Guid="*">
-                <File Id="fil1DBFAF4D3F4FDB9DCA27A11CE76CEB68" KeyPath="yes" Source="SourceDir\mingw32\lib\thread2.7.2\pkgIndex.tcl" />
+            <Component Id="cmp3DE98CF03E8FB551B61B64EEBFD738B5" Directory="dir89DB38DCA2CFE24AE85BEDFB615EB15B" Guid="*">
+                <File Id="filF6BFDA26D30173C3E1A74B0BA9D70CEE" KeyPath="yes" Source="SourceDir\mingw32\lib\thread2.7.3\pkgIndex.tcl" />
             </Component>
-            <Component Id="cmp475E6545177A071711F0469AF6ED4F6D" Directory="dir8287DAB4EA426C52EB89DBCB3B783702" Guid="*">
-                <File Id="filFCDAA0DDCE1B31601DA1FAA670AD3C02" KeyPath="yes" Source="SourceDir\mingw32\lib\thread2.7.2\thread272.dll" />
+            <Component Id="cmp0EA5E7113EB74DDE28E5C4F251B1B456" Directory="dir89DB38DCA2CFE24AE85BEDFB615EB15B" Guid="*">
+                <File Id="fil94E18061BF9007C09F5DA612DFEAE3BD" KeyPath="yes" Source="SourceDir\mingw32\lib\thread2.7.3\thread273.dll" />
             </Component>
-            <Component Id="cmpFD4400CC60977BBA0FE2631362EDC64A" Directory="dir8287DAB4EA426C52EB89DBCB3B783702" Guid="*">
-                <File Id="fil7DF5B1F4FE45A3B413B13DDE134B7CE9" KeyPath="yes" Source="SourceDir\mingw32\lib\thread2.7.2\ttrace.tcl" />
+            <Component Id="cmp9B692FF99FE004C547C1E35E9D1C3FC2" Directory="dir89DB38DCA2CFE24AE85BEDFB615EB15B" Guid="*">
+                <File Id="fil9DD38BB3BEC69CF728FFB24FF45F1C7B" KeyPath="yes" Source="SourceDir\mingw32\lib\thread2.7.3\ttrace.tcl" />
             </Component>
             <Component Id="cmp5897E04861038C5459144BA37854BCE4" Directory="dir846D5B1D6437AF1DB51851FFA68D9817" Guid="*">
                 <File Id="fil90D32FDE7887F27114543E1642849EB9" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\bgerror.tcl" />
@@ -3296,6 +3342,9 @@
             <Component Id="cmp961433721DE0840AB62B4F5054EF2334" Directory="dirA150D64D377B3FC7F90C247D28D4E778" Guid="*">
                 <File Id="fil07553B0E0DD945EE75A3736BEC8A918A" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\demos\images\earthris.gif" />
             </Component>
+            <Component Id="cmp0660ECCC24F30F1FA60E1C3C6761FEC8" Directory="dirA150D64D377B3FC7F90C247D28D4E778" Guid="*">
+                <File Id="fil0C4967B5085BE5018134FA5C9C6E1C39" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\demos\images\face.xbm" />
+            </Component>
             <Component Id="cmpB42CB08B16ADDD6899719170749365CB" Directory="dirA150D64D377B3FC7F90C247D28D4E778" Guid="*">
                 <File Id="fil25EBD8C93CA1B51575BAE9C1459F967D" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\demos\images\flagdown.xbm" />
             </Component>
@@ -3322,12 +3371,6 @@
             </Component>
             <Component Id="cmp34A8FD803D7C74674AF2E8B73B53778C" Directory="dirA150D64D377B3FC7F90C247D28D4E778" Guid="*">
                 <File Id="filA5EB10C7E9C2B3CAA31817B2CE999260" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\demos\images\teapot.ppm" />
-            </Component>
-            <Component Id="cmp4636F1569047E27A8E0E5F58103338F8" Directory="dir308E025A14B5EB84C695BE1647354FED" Guid="*">
-                <File Id="filC5AF3AE9AD88B3D242AB04DEA386325B" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\images\lamp.png" />
-            </Component>
-            <Component Id="cmpE6874DAC23F0E5C1492ED76843080361" Directory="dir308E025A14B5EB84C695BE1647354FED" Guid="*">
-                <File Id="filD7DB77E7233D2A2070446E741F17A917" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\images\lamp.svg" />
             </Component>
             <Component Id="cmp4E55A8BE247C9A9156CE5CB3C149EA51" Directory="dir308E025A14B5EB84C695BE1647354FED" Guid="*">
                 <File Id="fil6E4509C6F9F5F32BC72FA0E6659EC9D4" KeyPath="yes" Source="SourceDir\mingw32\lib\tk8.6\images\logo.eps" />
@@ -3512,6 +3555,9 @@
             <Component Id="cmpD02D70AE5E980E96972EF3726368F5DB" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil16BD80835D4CBD24583CA366003C8D2C" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-archive.exe" />
             </Component>
+            <Component Id="cmp5ECE57A08310DF83CB09BE31BC14D7A1" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="filBF9258566CAF7697E8CB3B71DB376B3E" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-askpass.exe" />
+            </Component>
             <Component Id="cmp3D1C5DA5D4AC26CB960DE46F6A9E0ECB" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil03A5E24C5A626277834BD0334C576C17" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-bisect" />
             </Component>
@@ -3577,6 +3623,9 @@
             </Component>
             <Component Id="cmpDBD28E2C31E3BC4C98BB0E0EBC8E2DE1" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil553E08F39ADF65A49FF868F7783A671E" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-count-objects.exe" />
+            </Component>
+            <Component Id="cmp47AA5A0037AF1F0F2D0C520D2C782013" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil9C9E3B7E8827ABC2D583008215F272F6" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-credential-manager.exe" />
             </Component>
             <Component Id="cmpE5D486DB6C9275E7C7C875CC29700F48" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filAF7A0806654C4DE763ED9B2A9AA63808" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-credential-store.exe" />
@@ -3818,6 +3867,9 @@
             <Component Id="cmp14D0CEA4C817E0F6AFFF0F396E60C736" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil9D260D68421F26329D904AA3F28EF96D" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-rebase--am" />
             </Component>
+            <Component Id="cmpDB396FC56A1ACD4572376D0913B380FD" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil4117216AC47E3237B1FF1D8D04A475F8" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-rebase--helper.exe" />
+            </Component>
             <Component Id="cmp7F65846A7FA91FD8634EC09C742462D0" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil5C7DD37A67D2FABC250AB4B893306756" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-rebase--interactive" />
             </Component>
@@ -3926,6 +3978,9 @@
             <Component Id="cmpE33C29B8740C290A969EA4E2F14BB4B7" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil8E2FBDAC603FFFBC7BA46D6AD4DF3830" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-submodule" />
             </Component>
+            <Component Id="cmp5298469CEA9A1B9514B925BFCE8EE19E" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil0ABB33872730790B42A04835656D0965" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-submodule--helper.exe" />
+            </Component>
             <Component Id="cmpE1C74F336D30FDB63BFF87F481009AAE" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filA3C89ABD4B446E2D1866027971A3344C" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git-subtree" />
             </Component>
@@ -3986,6 +4041,9 @@
             <Component Id="cmpBE76F88AB596666ACDA15F0441C71FB6" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil2E3EAECB8EAE11E6C0F65F72A567EDE8" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\git.exe" />
             </Component>
+            <Component Id="cmp5AC891BE46280C2DE202A9B1F7BFAA98" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="filBE89CAAC1DEA5923859FC03663ACBF68" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\github.authentication.exe" />
+            </Component>
             <Component Id="cmpEB3324FA168199FC51FB2850DF1E46F1" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filFCC72B8490294A0655A9F964B709FE61" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libatomic-1.dll" />
             </Component>
@@ -4013,6 +4071,9 @@
             <Component Id="cmpE78FF0D2D299BA3AEF04AD2FFFA779B9" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil71C37599C450F1B4920F73A3AA9C6384" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libgcc_s_dw2-1.dll" />
             </Component>
+            <Component Id="cmpD1133415A2752643E86D3570DC32B308" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="filDFA7930DC77847087A47295D130D3C5A" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libgfortran-3.dll" />
+            </Component>
             <Component Id="cmp82EAB4CC6B16E0DFAC95D02642F27068" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filF315FE770A946411A5098781FD5C9640" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libgmp-10.dll" />
             </Component>
@@ -4025,11 +4086,8 @@
             <Component Id="cmp9E145F83C560C2B2B5D4B3744485FD42" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil061E0491E5F61667AA37F739C4F88BB8" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libgomp-1.dll" />
             </Component>
-            <Component Id="cmp22F51EF11120302F458BE73806CF6A1E" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
-                <File Id="fil482D24E64ADA58F38AAC27603EDE1819" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libgomp-plugin-host_nonshm-1.dll" />
-            </Component>
-            <Component Id="cmpE5A7B997EC1D8BBA71631797F257AC98" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
-                <File Id="fil99C4D7CFD24C14ABF30E605D07D4BA8A" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libhogweed-4-1.dll" />
+            <Component Id="cmp6F94A6D265BD728773726F610B5187F1" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="filADD1B6112D8EA50886813E44175E19B0" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libhogweed-4-2.dll" />
             </Component>
             <Component Id="cmp01DE38B6FAA91C05391E3732A3F018E7" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil2CE2B9506E60E545828825E7004861EF" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libiconv-2.dll" />
@@ -4040,11 +4098,23 @@
             <Component Id="cmpA061762CA592028EEA4FDE216A0D48A2" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filB0B3608BA23AF8AE9560D6CCD64D0927" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libintl-8.dll" />
             </Component>
+            <Component Id="cmp59345FEE9E70723CBBC265D8FFD398C0" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil935D3E7D164266FAD2712078AC1C282F" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libitm-1.dll" />
+            </Component>
+            <Component Id="cmp1F261F9A404FA8815172AE559636AB33" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil9FE7A13D4E2FF15729CE060E4BB66E6C" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libjansson-4.dll" />
+            </Component>
+            <Component Id="cmp5D51D9DF63DB1C75DB48BB0B930920FD" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="filDFC6EF72858D51A5A5CAE57342C0FA4C" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libmetalink-3.dll" />
+            </Component>
             <Component Id="cmpD9BCF8F756462FDD46A79F5B523CF770" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filA6306F2FA143BB00CEE053B749964C25" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libminizip-1.dll" />
             </Component>
-            <Component Id="cmp2C77C3887ABC08908E58A82FC69A1052" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
-                <File Id="fil59CC86A6328F62617113FE4C712E65F8" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libnettle-6-1.dll" />
+            <Component Id="cmp507C7A078401EF7634E7680FC98DECA7" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil7A96724956AC8EA4AA004E9B4A098766" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libnettle-6-2.dll" />
+            </Component>
+            <Component Id="cmp39F5D28EFB1954C66620E519422FBD3D" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil270946BFF239F088CA236E5EF8B198A6" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libnghttp2-14.dll" />
             </Component>
             <Component Id="cmp6AEEA08DA1F99948DC15819AFB7CE3C9" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="fil8869AA54E5450ACBE6B735BACE415CDB" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libp11-kit-0.dll" />
@@ -4081,6 +4151,21 @@
             </Component>
             <Component Id="cmp0D223B656C7EDC07A353E2899460E6EC" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filEFD8BA4EEDFE24EC23D5937DCB1D33E3" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\libwinpthread-1.dll" />
+            </Component>
+            <Component Id="cmp927AEEBEB482D5715F0D21A11239E9AE" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil8A96B18E7CF741673B5B1031D00F8A66" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\Microsoft.Alm.Authentication.dll" />
+            </Component>
+            <Component Id="cmpB86E9286E769BC6297E0AE93389BD850" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="filC53B3249FF3AA53C3ABF16175CBEBB19" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\Microsoft.Alm.Git.dll" />
+            </Component>
+            <Component Id="cmpA92DDBC2CB3D5A17BF6E7783DD0D6D1D" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil1E536B8D6D3527C324315CD701440585" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
+            </Component>
+            <Component Id="cmp95E02C67514B201024CC2D37CC6DF807" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil7190C3C31BFD3C8648D489C6606F928A" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll" />
+            </Component>
+            <Component Id="cmp3C497313B2F2B6F5DB6ED523AE5A62C5" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
+                <File Id="fil5E391FB782534CAFFF856C29A7D6768A" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll" />
             </Component>
             <Component Id="cmpD3AFD90542AC03F17BAF2C995D93864C" Directory="dir402D5FBC4DE2BC7D4C49739DA8C7FCAA" Guid="*">
                 <File Id="filE4BC1027836EEEE5A1A72239FBDA53E3" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\ssleay32.dll" />
@@ -4120,6 +4205,9 @@
             </Component>
             <Component Id="cmp07F3C495E7D9895D0CE6FDCB78833BCF" Directory="dirC78A2ECD6CDD05854AB3EF42F847200C" Guid="*">
                 <File Id="fil6C0E7D3D64104489D72A69607A5052DC" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\mergetools\emerge" />
+            </Component>
+            <Component Id="cmpE4E39BC97C49DD11E5A321A7A1194FC6" Directory="dirC78A2ECD6CDD05854AB3EF42F847200C" Guid="*">
+                <File Id="filF0AB3C30EACDDDD27789DC24718228FF" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\mergetools\examdiff" />
             </Component>
             <Component Id="cmpABE4BE6CA095822232C45CC050C33CC1" Directory="dirC78A2ECD6CDD05854AB3EF42F847200C" Guid="*">
                 <File Id="filBB85D98FA083CA71A0AAD0FB429EBF26" KeyPath="yes" Source="SourceDir\mingw32\libexec\git-core\mergetools\gvimdiff" />
@@ -4970,8 +5058,38 @@
             <Component Id="cmpEA44421F47825D727B29BCDC901B4ED0" Directory="dirF773A65BCD93BF52A0EABE5C6D2409ED" Guid="*">
                 <File Id="filF6F81E519960D2E59B029714348E7354" KeyPath="yes" Source="SourceDir\mingw32\share\doc\git-doc\technical\shallow.html" />
             </Component>
+            <Component Id="cmpC1EDF83B32DFFC4373DD1DB4EE6FA21F" Directory="dirF773A65BCD93BF52A0EABE5C6D2409ED" Guid="*">
+                <File Id="fil32927BA27CA673731D46C1F61BEFF6E3" KeyPath="yes" Source="SourceDir\mingw32\share\doc\git-doc\technical\signature-format.html" />
+            </Component>
             <Component Id="cmpC435008B0C077A1D84BFFF507A9485E7" Directory="dirF773A65BCD93BF52A0EABE5C6D2409ED" Guid="*">
                 <File Id="fil1A96056C9364F430071DDB8DD547BFCA" KeyPath="yes" Source="SourceDir\mingw32\share\doc\git-doc\technical\trivial-merge.html" />
+            </Component>
+            <Component Id="cmp61EA6776A7EDA49D28EDDD33ED41FDF7" Directory="dirE5AA418A544596EBC6C89B6A57626CA5" Guid="*">
+                <File Id="fil878C1C9ACB8ADA7211AC6C9267D37F17" KeyPath="yes" Source="SourceDir\mingw32\share\doc\nghttp2\README.rst" />
+            </Component>
+            <Component Id="cmpF65BDAC1F776ECAE115FC4A197691DEE" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="fil1739E8ED6602C85E7B3FF4E2C0E55DF8" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\appdata.its" />
+            </Component>
+            <Component Id="cmpB480479A25CA5631B7F27E3B837FA7C3" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="filA4693656214EAE5188CEAE48D3CF0AFF" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\appdata.loc" />
+            </Component>
+            <Component Id="cmp0B6CD4C58763BDB2147F1D6D62E61809" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="fil412AF81B893F0F8CAF418DADECABE071" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\glade.loc" />
+            </Component>
+            <Component Id="cmpE406A26C4FC8ED0750D4778BA1BE114F" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="fil91756865E18267F8AA60B35BF4D3C167" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\glade1.its" />
+            </Component>
+            <Component Id="cmpF04B993C02D38B54A21E15A464CA5282" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="filACE7834E531163274FBF3FE7550D448C" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\glade2.its" />
+            </Component>
+            <Component Id="cmpF69BD09BD4E6DF9A5290C204304A1DEE" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="fil6B260AFE331892AAB05306833A711866" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\gsettings.its" />
+            </Component>
+            <Component Id="cmpB990542F72F013FA55F86D687490D3F0" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="filC7B96B110717C9CE220336E0FB565745" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\gsettings.loc" />
+            </Component>
+            <Component Id="cmpFF6A54072E7C1EBCEBC06F97922DAA1A" Directory="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Guid="*">
+                <File Id="fil42256E324A93DA2FFDDD130D303F6CB5" KeyPath="yes" Source="SourceDir\mingw32\share\gettext-0.19.7\its\gtkbuilder.its" />
             </Component>
             <Component Id="cmpD49CF00F2DC657A2E9F517EFB2764E81" Directory="dirA9BBB4365498D02A4C60D5E5F160D444" Guid="*">
                 <File Id="fil558BB290958FF4955A52D7E02A56DCC8" KeyPath="yes" Source="SourceDir\mingw32\share\git\builtins.txt" />
@@ -4979,8 +5097,8 @@
             <Component Id="cmp0B895023855EC8A9ECA16E71B2F43E91" Directory="dirA9BBB4365498D02A4C60D5E5F160D444" Guid="*">
                 <File Id="fil5CEB61DBE6AB2AB80448ECF41E01C61F" KeyPath="yes" Source="SourceDir\mingw32\share\git\compat-bash.exe" />
             </Component>
-            <Component Id="cmpE4F98B22D3235BE867E5C25364CD6BC2" Directory="dirA9BBB4365498D02A4C60D5E5F160D444" Guid="*">
-                <File Id="fil2B046E0DD8BAC46DB32461381F79A726" KeyPath="yes" Source="SourceDir\mingw32\share\git\git-for-windows.ico" />
+            <Component Id="cmp23734225DADA2DD6BF64B9F4A40CDF04" Directory="dirA9BBB4365498D02A4C60D5E5F160D444" Guid="*">
+                <File Id="fil9A1FCEF5F505B0AA79215EBF45B17884" KeyPath="yes" Source="SourceDir\mingw32\share\git\git-wrapper.exe" />
             </Component>
             <Component Id="cmp444BD45A974C5DC560424E793F19D7C5" Directory="dirED332C60343179F101B4CB2CB73769E6" Guid="*">
                 <File Id="fil017AA2C9831C3C7501838892215F248E" KeyPath="yes" Source="SourceDir\mingw32\share\git\completion\git-completion.bash" />
@@ -5017,6 +5135,9 @@
             </Component>
             <Component Id="cmp75CDAC672BBD6518C719EE57210AB75B" Directory="dir1CD3840D3C15D80879B88D2247405D0C" Guid="*">
                 <File Id="fil777FB29A091BCCC072A87347B3173A9F" KeyPath="yes" Source="SourceDir\mingw32\share\git-core\templates\hooks\pre-rebase.sample" />
+            </Component>
+            <Component Id="cmp4618544C05A6B76D56BFEC07F9218FA6" Directory="dir1CD3840D3C15D80879B88D2247405D0C" Guid="*">
+                <File Id="fil2805D263C23234C0CA15084E6E2CD91C" KeyPath="yes" Source="SourceDir\mingw32\share\git-core\templates\hooks\pre-receive.sample" />
             </Component>
             <Component Id="cmp3FB93E889FB289F155E8495D7CEB571E" Directory="dir1CD3840D3C15D80879B88D2247405D0C" Guid="*">
                 <File Id="fil328B52B81328062BFC3BB5DE6D2DFF9F" KeyPath="yes" Source="SourceDir\mingw32\share\git-core\templates\hooks\prepare-commit-msg.sample" />
@@ -5255,6 +5376,9 @@
             <Component Id="cmpC249285E706FA311FE625C5DE385EC52" Directory="dirF4FA47F616556A77AB55F4591668949D" Guid="*">
                 <File Id="fil6AA251F4CE52F9E655F39521BC855F46" KeyPath="yes" Source="SourceDir\mingw32\share\licenses\zlib\LICENSE" />
             </Component>
+            <Component Id="cmp616CA5EAD776A74ED9EE3DA3EF06CF53" Directory="dirF5C28E76E4B2D646008F055672943378" Guid="*">
+                <File Id="fil13563562AC7A8271C871D1EDEC5CD3C5" KeyPath="yes" Source="SourceDir\mingw32\share\nghttp2\i686-w64-mingw32-fetch-ocsp-response" />
+            </Component>
             <Component Id="cmp1BEC2F3DC7D94787DC1CFD66FB86D5F6" Directory="dir1C9DB3798912DBF0043A0ACF078BB14B" Guid="*">
                 <File Id="fil50450FF3017DEEBD7EF4586E472E1AFC" KeyPath="yes" Source="SourceDir\mingw32\share\p11-kit\modules\p11-kit-trust.module" />
             </Component>
@@ -5330,6 +5454,9 @@
             <Component Id="cmp58C9EE5353675E5BDC12132D1BC521D0" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filE2AD8E7468F025F685C4E155814FB3E9" KeyPath="yes" Source="SourceDir\usr\bin\backup" />
             </Component>
+            <Component Id="cmp7075858DC0F89E543E277173259B41E9" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="filCBF261ACFF5376987D3E668CEF421027" KeyPath="yes" Source="SourceDir\usr\bin\base32.exe" />
+            </Component>
             <Component Id="cmp898964B5299EC244B9CAE9CE080097A7" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil9E7D369F57521C84DE2D9E4BFC03FD31" KeyPath="yes" Source="SourceDir\usr\bin\base64.exe" />
             </Component>
@@ -5404,6 +5531,9 @@
             </Component>
             <Component Id="cmpE3F7489C7B4C9D1D882BA5C7DB506D49" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil84DD46776BEE9703C69EB2E702A4BF25" KeyPath="yes" Source="SourceDir\usr\bin\cmp.exe" />
+            </Component>
+            <Component Id="cmp9C5BBCE93EF97E5106B81EA90DE137D8" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil4B42F2C8B6014166F42C568B69A35CD9" KeyPath="yes" Source="SourceDir\usr\bin\column.exe" />
             </Component>
             <Component Id="cmp6E8E92E16B77413D19A0B55A550B6039" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil05251A5A01221B23FCE1D111101E052F" KeyPath="yes" Source="SourceDir\usr\bin\comm.exe" />
@@ -5519,8 +5649,8 @@
             <Component Id="cmp4F01B6C39142144C867577CF6907EDF7" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filD8AFD07CB5B31F245A3D3DFC17516BD2" KeyPath="yes" Source="SourceDir\usr\bin\funzip.exe" />
             </Component>
-            <Component Id="cmp59FE0086698C9B4D6E83A1A41416607E" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
-                <File Id="fil6933E336EF7A387414F401BEFE82BEB4" KeyPath="yes" Source="SourceDir\usr\bin\gawk-4.1.3.exe" />
+            <Component Id="cmp8A4A27815465715F534316C5C1DE9498" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil141658A4BC617453F42F4B3E98BCC989" KeyPath="yes" Source="SourceDir\usr\bin\gawk-4.1.4.exe" />
             </Component>
             <Component Id="cmp3E75FA927C2AA58F0B82DA5C57D81FE5" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filB3D9E6C7B0A1463BC5E24EC6B8EA5138" KeyPath="yes" Source="SourceDir\usr\bin\gawk.exe" />
@@ -5732,6 +5862,9 @@
             <Component Id="cmp4BFAF3190AFF999F73A3902F663F53E5" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filC7B5367692670C5209B4E0B340944D81" KeyPath="yes" Source="SourceDir\usr\bin\msys-charset-1.dll" />
             </Component>
+            <Component Id="cmp23D5A8EB03B9DE98A0BA91F72FC224BB" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil20084A95DC724C80B1D4360E053C556C" KeyPath="yes" Source="SourceDir\usr\bin\msys-cilkrts-5.dll" />
+            </Component>
             <Component Id="cmp2C516B6BDE2F5B6A0DA121F7EAA76650" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filCBD65982ECF820F36CA4CA871A074781" KeyPath="yes" Source="SourceDir\usr\bin\msys-com_err-1.dll" />
             </Component>
@@ -5776,6 +5909,9 @@
             </Component>
             <Component Id="cmpF8EF4F2070B74FD534CF343DFBEC1C92" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil1C38003CA6EFE710CDF91F065DF60458" KeyPath="yes" Source="SourceDir\usr\bin\msys-gomp-1.dll" />
+            </Component>
+            <Component Id="cmp80ADFEA093B69424F69F02FA21CF70FF" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil49783626488930D693F8ABA393C0EDFF" KeyPath="yes" Source="SourceDir\usr\bin\msys-gomp-plugin-host_nonshm-1.dll" />
             </Component>
             <Component Id="cmpBA66F79136A4B5313361BF291A658DF5" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filC327209605463C0CD0D584424E0290A1" KeyPath="yes" Source="SourceDir\usr\bin\msys-gssapi-3.dll" />
@@ -5903,11 +6039,20 @@
             <Component Id="cmpA9EA14A795CD953076AB71CB2F39E6AB" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filCA6386C92DF7B5BCF5A9A9BE2F024ACB" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3percentile-0.dll" />
             </Component>
+            <Component Id="cmpA70F0B66458341D4DA6670705BC10096" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil3952CA3960DA4234845F3D5D5CB97CF8" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3rbu-0.dll" />
+            </Component>
             <Component Id="cmp1F96D00CDC979FDFAF8316B9E91944DE" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil938263B91A656A13AAE28DDB51546C06" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3regexp-0.dll" />
             </Component>
             <Component Id="cmp9DCE3CB6D1AE764003279F14FDEACB79" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil6B27221B41776A76B9E2FC3EC4E90484" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3rot13-0.dll" />
+            </Component>
+            <Component Id="cmp3C1F771E0B1B9AE83915D8EBCD783678" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="filF8E5700E252C5EFFEFAE8A6D3819EE69" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3series-0.dll" />
+            </Component>
+            <Component Id="cmp7B4447C26566DF1A24C18BDDA6C97A21" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil1A64776E2DA039156109D1659866FB61" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3showauth-0.dll" />
             </Component>
             <Component Id="cmpB01FA6E4B8835FA349A3071CF0B1342B" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filC50CA37410B91CC80B30D0B3523A7239" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3spellfix-0.dll" />
@@ -5923,9 +6068,6 @@
             </Component>
             <Component Id="cmpBE296165052A9AF8EB4DBC26D652D772" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil66246927375629EA97C2EFCC81A4BBD3" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3wholenumber-0.dll" />
-            </Component>
-            <Component Id="cmp27F2F00AF5A2856CCAE1FC85300035B2" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
-                <File Id="filF1E5AA64FEDB1AEF5492B31ADA7FB771" KeyPath="yes" Source="SourceDir\usr\bin\msys-sqlite3zlib-0.dll" />
             </Component>
             <Component Id="cmpBFE435B8119A166531572ACF3F19F07D" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil1F6BCDEFCBD629D7B6A59359AE73F675" KeyPath="yes" Source="SourceDir\usr\bin\msys-ssh2-1.dll" />
@@ -5996,6 +6138,12 @@
             <Component Id="cmpB2B3C86F7AC694818C467E2DA85FD9B9" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filBF0FE36E9CA374E38F94E74E75329132" KeyPath="yes" Source="SourceDir\usr\bin\msys-uuid-1.dll" />
             </Component>
+            <Component Id="cmp412BBF23F96015D1392F161CCD38F223" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil0FC3DDF0BD02CCC2A638F0A0FAEC6A2C" KeyPath="yes" Source="SourceDir\usr\bin\msys-vtv-0.dll" />
+            </Component>
+            <Component Id="cmp9B28019314F3B04A562FD24A807F36C6" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil1D0B34876FDA7A458BBE7019CD02912F" KeyPath="yes" Source="SourceDir\usr\bin\msys-vtv_stubs-0.dll" />
+            </Component>
             <Component Id="cmp338111B50AB5A7F0BD636B79C859BF43" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil034F9B90BE8198C83F793F6999553901" KeyPath="yes" Source="SourceDir\usr\bin\msys-wind-0.dll" />
             </Component>
@@ -6026,9 +6174,6 @@
             <Component Id="cmp2F557773295304F128434172AFD702D2" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filDF996AFA40BDB7C7C9381E1ACDD4B551" KeyPath="yes" Source="SourceDir\usr\bin\od.exe" />
             </Component>
-            <Component Id="cmpA172589B73558680BA0356C365AC0F2C" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
-                <File Id="fil911FB22EDABE6371141D264F62D2A802" KeyPath="yes" Source="SourceDir\usr\bin\oldfind.exe" />
-            </Component>
             <Component Id="cmp76FC8C364B8E6209CA8FA070A48518EF" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filCA0F095306FFC0AD87EC06C9E694EA9D" KeyPath="yes" Source="SourceDir\usr\bin\openssl.exe" />
             </Component>
@@ -6049,6 +6194,9 @@
             </Component>
             <Component Id="cmp227325EA566C35DDF9A6695539E683EB" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil0244662F1AE744B5B5CEB6094748B089" KeyPath="yes" Source="SourceDir\usr\bin\perl.exe" />
+            </Component>
+            <Component Id="cmp34E1B55F1996BD51FD3DE174F567EE95" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="fil72B4899FDFCB31786213D81035215167" KeyPath="yes" Source="SourceDir\usr\bin\perl5.22.1.exe" />
             </Component>
             <Component Id="cmp6EACD5854282910513BE844303C276D6" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil9EFE76F489AC3D10B97029B8F46653AB" KeyPath="yes" Source="SourceDir\usr\bin\pinky.exe" />
@@ -6167,9 +6315,6 @@
             <Component Id="cmpB9D908B9DB7F4E10D10910BB36781657" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil9BD90C11BAD559B62870D0CD7E5CD92D" KeyPath="yes" Source="SourceDir\usr\bin\sleep.exe" />
             </Component>
-            <Component Id="cmpA22650A403C60DD07FBC403BD24D2BFA" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
-                <File Id="fil6920383B254C5FC66E243BB4E6EEC142" KeyPath="yes" Source="SourceDir\usr\bin\slogin.exe" />
-            </Component>
             <Component Id="cmp474FE6B8B4D9981C41C1CC7FFCE7B62B" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filDE659831ECEDF8B0A7FADBBFD0863AC8" KeyPath="yes" Source="SourceDir\usr\bin\sort.exe" />
             </Component>
@@ -6190,6 +6335,9 @@
             </Component>
             <Component Id="cmp7AED099C0E3F7503ED363FFADE5B3DDA" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="filEDD805AE86CE6C8C2336C3440B4D77DC" KeyPath="yes" Source="SourceDir\usr\bin\ssh-keyscan.exe" />
+            </Component>
+            <Component Id="cmpEA996EC9E69D50C812F81CEECEDF2A6F" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
+                <File Id="filD99851670562812E026A34140ACF2CC9" KeyPath="yes" Source="SourceDir\usr\bin\ssh-pageant.exe" />
             </Component>
             <Component Id="cmp8D23E45EEA11C8959DB5AFAA6DADE509" Directory="dir6A7D6976458E11E3A3EB308C98B6389E" Guid="*">
                 <File Id="fil80F82B3706284409B9EFE4F558F43CAE" KeyPath="yes" Source="SourceDir\usr\bin\ssh.exe" />
@@ -8443,6 +8591,9 @@
             </Component>
             <Component Id="cmp8DDC90A877FAACC43536B308055E7D29" Directory="dir73D51472E6F76DC8BA15AEE2B893EA26" Guid="*">
                 <File Id="fil25343B6DE08C6CA263400D673A9F2D60" KeyPath="yes" Source="SourceDir\usr\share\perl5\core_perl\ExtUtils\CBuilder\Platform\dec_osf.pm" />
+            </Component>
+            <Component Id="cmp5CC167083D886725262AB21D9E5CF299" Directory="dir73D51472E6F76DC8BA15AEE2B893EA26" Guid="*">
+                <File Id="fil6AE13E969E6842EC87E37012C6913A56" KeyPath="yes" Source="SourceDir\usr\share\perl5\core_perl\ExtUtils\CBuilder\Platform\msys.pm" />
             </Component>
             <Component Id="cmpCCCD034856B63635BC51DF302DD085EB" Directory="dir73D51472E6F76DC8BA15AEE2B893EA26" Guid="*">
                 <File Id="fil3888BB2B2DAAFBF3ABACE29DEA2CD887" KeyPath="yes" Source="SourceDir\usr\share\perl5\core_perl\ExtUtils\CBuilder\Platform\os2.pm" />
@@ -11885,6 +12036,9 @@
             <Component Id="cmp02CE7351AE15CBDB7E871868DA38E444" Directory="dirDD38344BA3E816C5F927F983324C5D81" Guid="*">
                 <File Id="fil86418CAFD5A560F4FEC6F16465FD8E61" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\doc\change.txt" />
             </Component>
+            <Component Id="cmp9F912BC27E17510F80A0AAFF2867CE01" Directory="dirDD38344BA3E816C5F927F983324C5D81" Guid="*">
+                <File Id="filAB8C03944DAEE946B0F60090C41A5365" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\doc\channel.txt" />
+            </Component>
             <Component Id="cmp027699FDBDF758742EE756EC1C8CFE6C" Directory="dirDD38344BA3E816C5F927F983324C5D81" Guid="*">
                 <File Id="fil7E6B414C694CCC1CA7DB0FCAB1969B35" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\doc\cmdline.txt" />
             </Component>
@@ -11926,9 +12080,6 @@
             </Component>
             <Component Id="cmp67E712F1FD2805FE232B8DC93EBDF390" Directory="dirDD38344BA3E816C5F927F983324C5D81" Guid="*">
                 <File Id="fil19CB275D730D2D10A1934B7EC8053F5F" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\doc\gui.txt" />
-            </Component>
-            <Component Id="cmpAA62D6C1E82744C9181C56648CAF5AED" Directory="dirDD38344BA3E816C5F927F983324C5D81" Guid="*">
-                <File Id="fil5839C989E9470A66A5B5279D025A2902" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\doc\gui_w16.txt" />
             </Component>
             <Component Id="cmp5487417871F711CC9956E1AE60D63107" Directory="dirDD38344BA3E816C5F927F983324C5D81" Guid="*">
                 <File Id="fil57DC475D77E5593DBA24F3985A0358B9" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\doc\gui_w32.txt" />
@@ -12320,6 +12471,9 @@
             <Component Id="cmpDEA7E5BF10236AED15D5FC7F66C57D19" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="fil1CC31F21AE235C46A0EDCEAB46511B42" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\btm.vim" />
             </Component>
+            <Component Id="cmp147CA5A2CD0769B5999B77525B82723F" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
+                <File Id="fil45E68023938E98843A84774FA8C2F7D9" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\bzl.vim" />
+            </Component>
             <Component Id="cmp7C62CDE65E40EC84767F7930D7BCD988" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="fil833D0354C33A30482FFB68EE6D9CB11F" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\c.vim" />
             </Component>
@@ -12413,6 +12567,9 @@
             <Component Id="cmpEC59E4F98D36AC7F77E2F530FC828B04" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="fil357C92F6B2B236B8CA651948A5ADFCDF" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\dtrace.vim" />
             </Component>
+            <Component Id="cmp5D0852BB65C1F853F5B3D4466FBE01FB" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
+                <File Id="filB3140FBE47444E571FB6796FC1308439" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\eiffel.vim" />
+            </Component>
             <Component Id="cmp7FEAAE1CE696F809A1B63CF52839F5BA" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="filD5E897C6E709BBF1967FF70710F20E3A" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\elinks.vim" />
             </Component>
@@ -12484,6 +12641,12 @@
             </Component>
             <Component Id="cmpAFFF9D192B96D027D44C69528629C615" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="fil8CD6D2EAA4E6A2E409622AB413C37F53" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\help.vim" />
+            </Component>
+            <Component Id="cmp145155155A68813EA8D0186B3A5FE9A9" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
+                <File Id="fil810A453C953B4DB496D9D2D6641C8AE0" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\hgcommit.vim" />
+            </Component>
+            <Component Id="cmp78726BF13A6F5862A5FAD43F83C84D2D" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
+                <File Id="filB8F3E6211F61C4DD1A5A426FFA933E90" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\hog.vim" />
             </Component>
             <Component Id="cmpE35A3D769A2C418C5EFA3AB349951C7E" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="filD32CAA6FD744E8909B039D3C158042E4" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\hostconf.vim" />
@@ -12788,6 +12951,9 @@
             <Component Id="cmpDAB1C53167125681FF2DAF3E424AF103" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="fil439DBDE21BA12D09316136F8CFDE71A0" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\sysctl.vim" />
             </Component>
+            <Component Id="cmpBED09FA592709AE768A9164E55B17B88" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
+                <File Id="fil39AC3E019E97DC5FE63FC8B6C69635A8" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\systemd.vim" />
+            </Component>
             <Component Id="cmp48D12C14319E47099E3547708B7B1433" Directory="dirBF685805D43C3B4BAC06D81B3169A680" Guid="*">
                 <File Id="fil4396F4D59D7446941357F324DB0D0092" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\ftplugin\systemverilog.vim" />
             </Component>
@@ -12896,6 +13062,9 @@
             <Component Id="cmp4EAA35812BD94D4DC8847F8914F0D5B6" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
                 <File Id="fil749F489272975F2D66EEA3C1B6750574" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\bst.vim" />
             </Component>
+            <Component Id="cmpF04D965EDC9D1C94534FB5DE35294814" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
+                <File Id="fil872E086BF209096692DE9B6E9B354ACA" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\bzl.vim" />
+            </Component>
             <Component Id="cmp5C515DDA0B689905E47B5639E2475A14" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
                 <File Id="fil109E82B2C1A502EA679DB352EE436F94" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\c.vim" />
             </Component>
@@ -12994,6 +13163,9 @@
             </Component>
             <Component Id="cmpF350C29D893001A4A02267C411C8C00C" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
                 <File Id="fil42C5ED8977BEC5C0D025D574A33A3195" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\hamster.vim" />
+            </Component>
+            <Component Id="cmpECE225C346C379012F28286063DBBC75" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
+                <File Id="fil0C2F99213CE3AA85F01655877DDDAD15" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\hog.vim" />
             </Component>
             <Component Id="cmp2E606A1277CEE6B93D40AA80F5052EAA" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
                 <File Id="fil97BF88F5A07EAD8A19EEFD89625423A5" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\html.vim" />
@@ -13147,6 +13319,9 @@
             </Component>
             <Component Id="cmp451351643FC0855F2C0EBEE226D6E4C3" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
                 <File Id="filE844386AF71D15B69B1A7D01032E2588" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\sqlanywhere.vim" />
+            </Component>
+            <Component Id="cmp9D05CD9D28393F8886C78ED004295D8E" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
+                <File Id="fil538F94CD447C8B3268527C2EFBFBEF7A" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\systemd.vim" />
             </Component>
             <Component Id="cmp8FF98D9C7718A863AAE28DABC7DD1E2E" Directory="dirD50E30EC8F37AA6D9EEE3B0B1996D6F5" Guid="*">
                 <File Id="fil042BFE6406B8638298D2959ABD199F12" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\indent\systemverilog.vim" />
@@ -13418,9 +13593,6 @@
             <Component Id="cmpE40F711F18FEC6985CA91C81CFBEDAC5" Directory="dirCCCD26E1E01F42C8979D477068FE728D" Guid="*">
                 <File Id="fil179E0A096D629FEFAFDF7AAD6D7779DF" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\keymap\vietnamese-viqr_utf-8.vim" />
             </Component>
-            <Component Id="cmp993BDE59EE6A6DE475121DE94EDE2782" Directory="dirC03F1D0209CECED0EC25E4BAB43E902E" Guid="*">
-                <File Id="filE5857244521C51D38AADD4F062F0B4BD" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\macros\dvorak" />
-            </Component>
             <Component Id="cmp79AF708533591B4E2CB4EC433BE80380" Directory="dirC03F1D0209CECED0EC25E4BAB43E902E" Guid="*">
                 <File Id="fil148020C4639110404BF397B1ACF3FB6D" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\macros\editexisting.vim" />
             </Component>
@@ -13435,9 +13607,6 @@
             </Component>
             <Component Id="cmpBCB371452479452B4F66F87C1BFC938E" Directory="dirC03F1D0209CECED0EC25E4BAB43E902E" Guid="*">
                 <File Id="fil0858B8F2A9A1CF7871C62E783C75DFD7" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\macros\less.vim" />
-            </Component>
-            <Component Id="cmpF780A16BB9F9622CF9E0224C42E49D66" Directory="dirC03F1D0209CECED0EC25E4BAB43E902E" Guid="*">
-                <File Id="fil04E341FD61CF346EE804A0FD9470EA67" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\macros\matchit.txt" />
             </Component>
             <Component Id="cmpD9F5417CC4032FB61095C26121C82C12" Directory="dirC03F1D0209CECED0EC25E4BAB43E902E" Guid="*">
                 <File Id="fil84AE030D99B95C3EEE6DA960D9EEB275" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\macros\matchit.vim" />
@@ -13495,6 +13664,36 @@
             </Component>
             <Component Id="cmp2154D60A962AF72D3432AAB3FA084D81" Directory="dir836C28A00A136995BEBD7027614F6047" Guid="*">
                 <File Id="fil383CBDBD2C31DA71E846688F5591314B" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\macros\urm\urm.vim" />
+            </Component>
+            <Component Id="cmp34A220BC65832C363B2102E27007C01B" Directory="dir969BB001D2BD364A3510C0A933437A4F" Guid="*">
+                <File Id="fil4C49E175664F6476B3A6E5F5CB5E316A" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\dvorak\dvorak\disable.vim" />
+            </Component>
+            <Component Id="cmp2379026CD96D0D95C57C106F80F54524" Directory="dir969BB001D2BD364A3510C0A933437A4F" Guid="*">
+                <File Id="fil3F334CD73695FB0526A5E6B1384AC115" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\dvorak\dvorak\enable.vim" />
+            </Component>
+            <Component Id="cmp81C7CCA6328D3CDF861AA0BE5EEF65CF" Directory="dirD04685A25D9D15FE9A083C1280CA2FC0" Guid="*">
+                <File Id="fil89D023BF23E7A934EA63970BDD64E356" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\dvorak\plugin\dvorak.vim" />
+            </Component>
+            <Component Id="cmp84D7615A35D679708B72D3DF4A36F766" Directory="dirC8901485D4BA506175C276B2EBAE2E95" Guid="*">
+                <File Id="filB02274B0382BD30EEFC284C56D8C751C" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\editexisting\plugin\editexisting.vim" />
+            </Component>
+            <Component Id="cmp4A89F5D5E166493F1766B3A5F9BE6F4D" Directory="dirF6BF70A2658B8705C57A11D23B2F5927" Guid="*">
+                <File Id="fil2C04A28B7302A10CCD1A7861011535D6" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\justify\plugin\justify.vim" />
+            </Component>
+            <Component Id="cmp1F71AA413C29AACF2BF15400C3DB082B" Directory="dirA4BD339DD8379AB1E82115F62B2D3831" Guid="*">
+                <File Id="filB2D1E97CF315BA3A651B1339FF2EEB50" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\matchit\doc\matchit.txt" />
+            </Component>
+            <Component Id="cmpEAADB9F5C26AD503380E084D1B46DE00" Directory="dirA4BD339DD8379AB1E82115F62B2D3831" Guid="*">
+                <File Id="fil236C8C129B4ECE212179DEA43ACFE4F2" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\matchit\doc\tags" />
+            </Component>
+            <Component Id="cmp3BBBCBFB465E07BEE76D8C3E360D1CE7" Directory="dirB1F4500B0AC8F8AFDAC94533FC972679" Guid="*">
+                <File Id="fil069707EF02950CB28E31EA09629CBCFA" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\matchit\plugin\matchit.vim" />
+            </Component>
+            <Component Id="cmp19365DC034748855971CAB52E3AB079A" Directory="dirFBDD7FC4E2A1F2FACCBB11559DDF2FB3" Guid="*">
+                <File Id="filCBC5AEEDC0EA05B62DC24A0F61336C90" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\shellmenu\plugin\shellmenu.vim" />
+            </Component>
+            <Component Id="cmpDA99D70B3E63B3177597B3363F9B673D" Directory="dir01615F26AF810E491B3922345C1BC8B0" Guid="*">
+                <File Id="filAFB3FC0E44B473DC7FDEA250E9395489" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\pack\dist\opt\swapmouse\plugin\swapmouse.vim" />
             </Component>
             <Component Id="cmp3769B509640F34F473BB413F77D93AB1" Directory="dir4BA4B263F6AA87FC0B2E6414F02A980B" Guid="*">
                 <File Id="fil79053A23F4DFA6129B2962A53F58DFE9" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\plugin\getscriptPlugin.vim" />
@@ -13816,6 +14015,9 @@
             </Component>
             <Component Id="cmp0C45378E3647C20283BAE6F113527FF0" Directory="dir1C6FDAB159F3D440661083EDF2CF9BF4" Guid="*">
                 <File Id="fil924873DA588DE83F2790D8E6765B8D2F" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\syntax\btm.vim" />
+            </Component>
+            <Component Id="cmp9973E6BD4CB218CFB411A5152B24654F" Directory="dir1C6FDAB159F3D440661083EDF2CF9BF4" Guid="*">
+                <File Id="filF243E6D8CB8F27D163BF8D1AFDA51C6F" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\syntax\bzl.vim" />
             </Component>
             <Component Id="cmp260EE528D0AA120558F346EE65EF0355" Directory="dir1C6FDAB159F3D440661083EDF2CF9BF4" Guid="*">
                 <File Id="filCFD62F7D42DED7C2091582B01C89DDA7" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\syntax\bzr.vim" />
@@ -15146,6 +15348,9 @@
             <Component Id="cmpD9C9ABAC8958853C83438FA291DF38C3" Directory="dir1C6FDAB159F3D440661083EDF2CF9BF4" Guid="*">
                 <File Id="fil06D0A67C08040B77028F80D9A7000DAF" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\syntax\sysctl.vim" />
             </Component>
+            <Component Id="cmp9844F276FD89F7E0493CE5BBA24C0A9A" Directory="dir1C6FDAB159F3D440661083EDF2CF9BF4" Guid="*">
+                <File Id="filB76AF504D03C92E1B6F5B06A99944621" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\syntax\systemd.vim" />
+            </Component>
             <Component Id="cmp1CA5408F809DD25319E0DECD04DC8A91" Directory="dir1C6FDAB159F3D440661083EDF2CF9BF4" Guid="*">
                 <File Id="fil326EFC4E0B656B04D291E8A24316D48C" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\syntax\systemverilog.vim" />
             </Component>
@@ -15424,6 +15629,9 @@
             </Component>
             <Component Id="cmpFD4AAB9F4E52D19E4B7708B5F3CA4E2A" Directory="dir17CC25CF110049391F5F4FBD71F4B9D2" Guid="*">
                 <File Id="filC653E7CBEB17D29EBEC383F4D75ADDA5" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\tools\ccfilter_README.txt" />
+            </Component>
+            <Component Id="cmp8CA0D8D10885F58BF9B67BC887854E63" Directory="dir17CC25CF110049391F5F4FBD71F4B9D2" Guid="*">
+                <File Id="fil5191E3B4B41D6B787E14C551C2202FBA" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\tools\demoserver.py" />
             </Component>
             <Component Id="cmp542E0C23364D96A64F0B3626EBD726F0" Directory="dir17CC25CF110049391F5F4FBD71F4B9D2" Guid="*">
                 <File Id="fil4BC454DF100506768823EBA18CD4A98D" KeyPath="yes" Source="SourceDir\usr\share\vim\vim74\tools\efm_filter.pl" />
@@ -15730,6 +15938,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir6FE196ED8673CE52CFC788BD41B06DEC">
+            <Directory Id="dir01615F26AF810E491B3922345C1BC8B0" Name="plugin" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dirD33EE9EA373F777705BE997D2B17B722">
             <Directory Id="dir017C1BE951D43500094642A198FD8262" Name="certs" />
         </DirectoryRef>
@@ -15867,6 +16080,11 @@
     <Fragment>
         <DirectoryRef Id="dir309768869CF764EEBA0B9E2430C2B9E8">
             <Directory Id="dir0E79DC88F1FC1E76F1701B237400DF61" Name="Base" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir5E1C90785F89B592A5C135C8A86EC262">
+            <Directory Id="dir0EA5FE2FBAEDFB1194D5EC3BBEE5D654" Name="dist" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -16340,6 +16558,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
+            <Directory Id="dir390BED454B30C10499631C5CBFBA41AE" Name="sqlite3.11.0" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir2BE4199A260AD268727659E341D5DE99">
             <Directory Id="dir39694FFB343B6CA9B2CD5BA911947461" Name="libssh2" />
         </DirectoryRef>
@@ -16352,6 +16575,11 @@
     <Fragment>
         <DirectoryRef Id="dir063FA34C1B590257E1C3EA4B0EAE82DE">
             <Directory Id="dir3C569D4C03D4F8EBA0AAABD26A3AAB93" Name="perl-Net-SSLeay" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir8389F9D98FD1BF27AE714AC1F2E3A643">
+            <Directory Id="dir3CA08F09D00A094B2E2AB6DCBD1E2BE6" Name="justify" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -16455,11 +16683,6 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
-        <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
-            <Directory Id="dir458C1FF221BC21730858B202BE2083ED" Name="sqlite3.8.8.3" />
-        </DirectoryRef>
-    </Fragment>
-    <Fragment>
         <DirectoryRef Id="dir7AED2C33325E2864E25393C9E77BC315">
             <Directory Id="dir45A59E3FC891146218880F58BFB7A643" Name="Hash" />
         </DirectoryRef>
@@ -16560,13 +16783,13 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
-        <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
-            <Directory Id="dir50921CF13D7C50C8948DAC41E790A026" Name="itcl4.0.3" />
+        <DirectoryRef Id="dir7D5B6199604090B96DA376FA052C1E9F">
+            <Directory Id="dir5099C22C475EC18139384D6232F25101" Name="doc" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
-        <DirectoryRef Id="dir7D5B6199604090B96DA376FA052C1E9F">
-            <Directory Id="dir5099C22C475EC18139384D6232F25101" Name="doc" />
+        <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
+            <Directory Id="dir5197CFBCE5C3ED3393B91F0778173B9F" Name="itcl4.0.4" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -16665,6 +16888,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir63C922F2C8719301E4987004118B8C45">
+            <Directory Id="dir5E1C90785F89B592A5C135C8A86EC262" Name="pack" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir87A34895ACD7BCE0142B9B46BB936803">
             <Directory Id="dir5EA07C97C5AC0C6D73A534BE16E82E50" Name="Hyphen" />
         </DirectoryRef>
@@ -16757,6 +16985,11 @@
     <Fragment>
         <DirectoryRef Id="dir8325A921F59CE61E763C6ED44AB8DA9C">
             <Directory Id="dir63C922F2C8719301E4987004118B8C45" Name="vim74" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir7D5B6199604090B96DA376FA052C1E9F">
+            <Directory Id="dir63E9C5EAB7AC4220FD2A87A205401474" Name="gettext-0.19.7" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -16885,8 +17118,18 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir8389F9D98FD1BF27AE714AC1F2E3A643">
+            <Directory Id="dir6FBC641FC72DA0483590BA013FB7076C" Name="editexisting" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir87A34895ACD7BCE0142B9B46BB936803">
             <Directory Id="dir6FC221E4AD68AAAF276A6859494B5DF6" Name="DI" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir8389F9D98FD1BF27AE714AC1F2E3A643">
+            <Directory Id="dir6FE196ED8673CE52CFC788BD41B06DEC" Name="swapmouse" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -16945,6 +17188,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir3936764FC3AD0BB82C8965A7B52B7E51">
+            <Directory Id="dir75D6561A46C9D259ABDE2EDA0C0EACD1" Name="doc" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir31AF703941D531254142234D28C83710">
             <Directory Id="dir7647791FD24656DD5C076FF865396A8E" Name="DB_File" />
         </DirectoryRef>
@@ -16967,6 +17215,11 @@
     <Fragment>
         <DirectoryRef Id="dirF0FE91C0426DBC6DBA2231D4BC28EC69">
             <Directory Id="dir785B38C8B12A6972087A31F6A19CB996" Name="Indian" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir8389F9D98FD1BF27AE714AC1F2E3A643">
+            <Directory Id="dir78794DDD4A4BFA42F5E923539B0D2530" Name="dvorak" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17007,6 +17260,11 @@
     <Fragment>
         <DirectoryRef Id="dir8DE08D5CA2DCE388BC4AED349AD1C697">
             <Directory Id="dir7D22FDD03DCD0E9EB3485FE7DBA2B541" Name="shared" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir75D6561A46C9D259ABDE2EDA0C0EACD1">
+            <Directory Id="dir7D2C678BF4790EE003F85B2EED5EAB74" Name="git-credential-manager" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17066,11 +17324,6 @@
     </Fragment>
     <Fragment>
         <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
-            <Directory Id="dir8287DAB4EA426C52EB89DBCB3B783702" Name="thread2.7.2" />
-        </DirectoryRef>
-    </Fragment>
-    <Fragment>
-        <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
             <Directory Id="dir82AC13DAC014065FA680D0A23E6639FE" Name="pkcs11" />
         </DirectoryRef>
     </Fragment>
@@ -17082,6 +17335,11 @@
     <Fragment>
         <DirectoryRef Id="dirC03F1D0209CECED0EC25E4BAB43E902E">
             <Directory Id="dir836C28A00A136995BEBD7027614F6047" Name="urm" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir0EA5FE2FBAEDFB1194D5EC3BBEE5D654">
+            <Directory Id="dir8389F9D98FD1BF27AE714AC1F2E3A643" Name="opt" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17182,6 +17440,11 @@
     <Fragment>
         <DirectoryRef Id="dir4CCD858D96401318BEDDDF4613772DD8">
             <Directory Id="dir895006F2EA86A96E6F3772919346431C" Name="overload" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6F694131F929AED2EB7CC063FDA0EF54">
+            <Directory Id="dir89DB38DCA2CFE24AE85BEDFB615EB15B" Name="thread2.7.3" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17390,6 +17653,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir78794DDD4A4BFA42F5E923539B0D2530">
+            <Directory Id="dir969BB001D2BD364A3510C0A933437A4F" Name="dvorak" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir4CCD858D96401318BEDDDF4613772DD8">
             <Directory Id="dir9740F33B36D89F35084813184035E7EA" Name="Net" />
         </DirectoryRef>
@@ -17517,6 +17785,11 @@
     <Fragment>
         <DirectoryRef Id="dir001A40CEF98606AA88DF38785F50B7AD">
             <Directory Id="dirA411BE6CBC2EE2427887891B6E97AB24" Name="lib" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirD41BE3DEEDB141F194DA0290129C5760">
+            <Directory Id="dirA4BD339DD8379AB1E82115F62B2D3831" Name="doc" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17672,6 +17945,11 @@
     <Fragment>
         <DirectoryRef Id="dir4CCD858D96401318BEDDDF4613772DD8">
             <Directory Id="dirB19B38C8AF9D2290A9D4C570CA3C5AD3" Name="File" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirD41BE3DEEDB141F194DA0290129C5760">
+            <Directory Id="dirB1F4500B0AC8F8AFDAC94533FC972679" Name="plugin" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17850,6 +18128,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir63E9C5EAB7AC4220FD2A87A205401474">
+            <Directory Id="dirC2C0EB93AE948CF8DE6D8D7D4EDE3438" Name="its" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir063FA34C1B590257E1C3EA4B0EAE82DE">
             <Directory Id="dirC2E6506911D75256F31AE4CBFF3FAF36" Name="mintty" />
         </DirectoryRef>
@@ -17907,6 +18190,11 @@
     <Fragment>
         <DirectoryRef Id="dir2BE4199A260AD268727659E341D5DE99">
             <Directory Id="dirC880B808C981B300B1D0B674901FBD96" Name="libiconv" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir6FBC641FC72DA0483590BA013FB7076C">
+            <Directory Id="dirC8901485D4BA506175C276B2EBAE2E95" Name="plugin" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -17975,6 +18263,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir78794DDD4A4BFA42F5E923539B0D2530">
+            <Directory Id="dirD04685A25D9D15FE9A083C1280CA2FC0" Name="plugin" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir4CCD858D96401318BEDDDF4613772DD8">
             <Directory Id="dirD16616DA82C679B21224C43D9985F945" Name="TAP" />
         </DirectoryRef>
@@ -18002,6 +18295,16 @@
     <Fragment>
         <DirectoryRef Id="dir4CCD858D96401318BEDDDF4613772DD8">
             <Directory Id="dirD39A8DF483C28DED1D226C11E92B921E" Name="CPAN" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir8389F9D98FD1BF27AE714AC1F2E3A643">
+            <Directory Id="dirD3FA48E9717A22865BAFF9179450CC3D" Name="shellmenu" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir8389F9D98FD1BF27AE714AC1F2E3A643">
+            <Directory Id="dirD41BE3DEEDB141F194DA0290129C5760" Name="matchit" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -18212,6 +18515,11 @@
     <Fragment>
         <DirectoryRef Id="dir87A34895ACD7BCE0142B9B46BB936803">
             <Directory Id="dirE4B4B89DF3B0644F69B315D35648CDF5" Name="Jg" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir5099C22C475EC18139384D6232F25101">
+            <Directory Id="dirE5AA418A544596EBC6C89B6A57626CA5" Name="nghttp2" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -18435,6 +18743,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
+        <DirectoryRef Id="dir7D5B6199604090B96DA376FA052C1E9F">
+            <Directory Id="dirF5C28E76E4B2D646008F055672943378" Name="nghttp2" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
         <DirectoryRef Id="dir3936764FC3AD0BB82C8965A7B52B7E51">
             <Directory Id="dirF5ECA15B102CCA202BB0BC135E59D406" Name="etc" />
         </DirectoryRef>
@@ -18447,6 +18760,11 @@
     <Fragment>
         <DirectoryRef Id="dirC03F1D0209CECED0EC25E4BAB43E902E">
             <Directory Id="dirF6A611502E7EB077EDFDC6CD3FBD693C" Name="maze" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir3CA08F09D00A094B2E2AB6DCBD1E2BE6">
+            <Directory Id="dirF6BF70A2658B8705C57A11D23B2F5927" Name="plugin" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
@@ -18512,6 +18830,11 @@
     <Fragment>
         <DirectoryRef Id="dir0A89943C68955FCF87F591792548864C">
             <Directory Id="dirFB2593C213BDB6AF3CF04B2831655B51" Name="List" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirD3FA48E9717A22865BAFF9179450CC3D">
+            <Directory Id="dirFBDD7FC4E2A1F2FACCBB11559DDF2FB3" Name="plugin" />
         </DirectoryRef>
     </Fragment>
     <Fragment>
