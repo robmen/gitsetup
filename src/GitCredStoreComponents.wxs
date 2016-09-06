@@ -11,6 +11,7 @@
         </ComponentGroup>
 
         <CustomActionRef Id='InstallGitCredentials' />
+        <CustomActionRef Id='InstallGitCredentialManager' />
     </Fragment>
 
     <Fragment>
@@ -22,13 +23,26 @@
     <Fragment>
         <SetProperty Id='InstallGitCredentials' Value='"[#GitCredStoreExe]" -s "[#fil5C1B2C7A3DD12792819E6707E7478542]"'
                      Before='InstallGitCredentials' Sequence='execute' />
-        <CustomAction Id='InstallGitCredentials' BinaryKey='WixCA' DllEntry='CAQuietExec'
+        <CustomAction Id='InstallGitCredentials' BinaryKey='WixCA' DllEntry='WixQuietExec'
                       Execute='deferred' Return='ignore' Impersonate='yes'/>
 
         <PropertyRef Id="WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED" />
 
         <InstallExecuteSequence>
             <Custom Action='InstallGitCredentials' Before='InstallFinalize'>NOT Installed AND NOT WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED</Custom>
+        </InstallExecuteSequence>
+    </Fragment>
+
+    <Fragment>
+        <SetProperty Id='InstallGitCredentialManager' Value='"[#fil65820BAC8645ECCA80F578593ABCC673]" config --global credential.helper manager'
+                     Before='InstallGitCredentialManager' Sequence='execute' />
+        <CustomAction Id='InstallGitCredentialManager' BinaryKey='WixCA' DllEntry='WixQuietExec'
+                      Execute='deferred' Return='ignore' Impersonate='yes'/>
+
+        <PropertyRef Id="WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED" />
+
+        <InstallExecuteSequence>
+            <Custom Action='InstallGitCredentialManager' Before='InstallFinalize'>NOT Installed AND WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED</Custom>
         </InstallExecuteSequence>
     </Fragment>
 </Wix>
