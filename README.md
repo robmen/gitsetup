@@ -12,9 +12,9 @@ package provides a robust, transacted installation for msysGit.
 
 Also includes:
 
-* [git-credential-winstore](http://gitcredentialstore.codeplex.com/) - Windows
-Credential Store for Git is a small helper app designed to follow the git
-credentials API as defined by the [Git Documentation](https://github.com/gitster/git-htmldocs/blob/master/technical/api-credentials.txt).
+* [git-credential-winstore](http://gitcredentialstore.codeplex.com/) and [Git Credential Manager](https://github.com/Microsoft/Git-Credential-Manager-for-Windows) - Windows
+credential store managers are small helper apps that reduce the amount you are prompted
+for credentials. They implement the git credentials API as defined by the [Git Documentation](https://github.com/gitster/git-htmldocs/blob/master/technical/api-credentials.txt).
 
 * [git-flow](https://github.com/nvie/gitflow) - GitFlow is a collection
 of Git extensions to provide high-level repository operations for Vincent
