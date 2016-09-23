@@ -34,7 +34,7 @@
     </Fragment>
 
     <Fragment>
-        <SetProperty Id='InstallGitCredentialManager' Value='"[#fil65820BAC8645ECCA80F578593ABCC673]" config --global credential.helper manager'
+        <SetProperty Id='InstallGitCredentialManager' Value='"[#fil65820BAC8645ECCA80F578593ABCC673]" config --system credential.helper manager'
                      Before='InstallGitCredentialManager' Sequence='execute' />
         <CustomAction Id='InstallGitCredentialManager' BinaryKey='WixCA' DllEntry='WixQuietExec'
                       Execute='deferred' Return='ignore' Impersonate='yes'/>
