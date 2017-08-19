@@ -3,7 +3,7 @@
      xmlns:bal='http://schemas.microsoft.com/wix/BalExtension'
      xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
 <Bundle Name='!(bind.packageName.git.msi)' Manufacturer='!(bind.packageManufacturer.git.msi)'
-        Version='2.11.0.0' UpgradeCode='4adb169f-377b-4a52-b817-4ecee51fe64d'
+        Version='!(bind.packageVersion.git.msi)' UpgradeCode='4adb169f-377b-4a52-b817-4ecee51fe64d'
         IconSourceFile='git.ico'
         dep:ProviderKey='GitSetupBundle'>
 
@@ -14,7 +14,7 @@
   <Variable Name='InstallFolder' Value='[ProgramFilesFolder]Git' />
 
   <Chain>
-    <MsiPackage SourceFile='git.msi'>
+    <MsiPackage Id='git.msi' SourceFile='$(var.Package.TargetPath)'>
       <MsiProperty Name='INSTALLFOLDER' Value='[InstallFolder]' />
     </MsiPackage>
   </Chain>

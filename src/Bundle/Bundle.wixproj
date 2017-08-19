@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputName>gitsetup</OutputName>
+    <OutputType>Bundle</OutputType>
+    <ProjectGuid>{32eded6f-f573-4840-aece-7e019a1a5c0d}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>..\..\build\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\build\obj\$(Configuration)\$(MSBuildProjectFile)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\build\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\build\obj\$(Configuration)\$(MSBuildProjectFile)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GitBundle.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Package\Package.wixproj">
+      <Name>Package</Name>
+      <Project>{db21a71d-0866-4ff3-a39e-6877ff7c9f00}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixDependencyExtension">
+      <Name>WixDependencyExtension</Name>
+      <HintPath>$(WixExtDir)\WixDependencyExtension.dll</HintPath>
+    </WixExtension>
+    <WixExtension Include="WixBalExtension">
+      <Name>WixBalExtension</Name>
+      <HintPath>$(WixExtDir)\WixBalExtension.dll</HintPath>
+    </WixExtension>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
+  <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
+    <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
+  </Target>
+</Project>

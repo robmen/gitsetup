@@ -2,7 +2,7 @@
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
      xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
   <Product Id='*' Name='Git on Windows' Language='1033' Manufacturer='RobMensching.com LLC'
-                  Version='2.11.0.0'
+                  Version='!(bind.fileVersion.git.exe)'
                   UpgradeCode='abbb3e1d-fea0-4b84-9585-b4dc13cbc1b4'>
     <Package InstallScope='perMachine' Compressed='yes' />
 
@@ -12,7 +12,7 @@
     <Feature Id='Git'>
       <Component Directory='INSTALLFOLDER'>
         <RegistryValue Root='HKLM' Key='Software\Git' Name='InstallFolder' Value='[INSTALLFOLDER]' Type='string' />
-        <Environment Id='UpdatePath' Name='PATH' Value='[dir64FF3155E20E57A6382D3CDE88CED198]' Action='set' Part='last' System='yes' />
+        <Environment Id='UpdatePath' Name='PATH' Value='[dir6224ijVLx94XYG2KL6z4YR8qrrs]' Action='set' Part='last' System='yes' />
       </Component>
 
       <Component Directory='INSTALLFOLDER'>
