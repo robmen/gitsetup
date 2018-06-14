@@ -10,4 +10,28 @@
       </Component>
     </ComponentGroup>
   </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id='GitCredentialManager' Directory='GitCoreFolder'>
+      <Component>
+        <fg:HarvestFile Source='..\..\files\mingw32\libexec\git-core\git-credential-manager.exe'
+                        KeyIdentifier='CredManagerFile' />
+      </Component>
+    </ComponentGroup>
+
+    <CustomActionRef Id='InstallGitCredentialManager' />
+  </Fragment>
+
+  <Fragment>
+    <SetProperty Id='InstallGitCredentialManager' Value='"[#CredManagerFile]" config --global credential.helper manager'
+                 Before='InstallGitCredentialManager' Sequence='execute' />
+    <CustomAction Id='InstallGitCredentialManager' BinaryKey='WixCA' DllEntry='WixQuietExec'
+                  Execute='deferred' Return='ignore' Impersonate='yes'/>
+
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED" />
+
+    <InstallExecuteSequence>
+        <Custom Action='InstallGitCredentialManager' Before='InstallFinalize'>NOT Installed AND WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED</Custom>
+    </InstallExecuteSequence>
+  </Fragment>
 </Wix>

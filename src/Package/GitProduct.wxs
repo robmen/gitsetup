@@ -20,6 +20,7 @@
       </Component>
 
       <ComponentGroupRef Id='GitComponents'/>
+      <ComponentGroupRef Id='GitCredentialManager'/>
       <ComponentGroupRef Id='GitCredStoreComponents'/>
       <ComponentGroupRef Id='GitPoshComponents'/>
     </Feature>
@@ -28,7 +29,13 @@
   <Fragment>
     <Directory Id='TARGETDIR' Name='SourceDir'>
       <Directory Id='ProgramFilesFolder' Name='PFiles'>
-        <Directory Id='INSTALLFOLDER' Name='Git' />
+        <Directory Id='INSTALLFOLDER' Name='Git'>
+          <Directory Id='Mingw32Folder' Name='mingw32'>
+            <Directory Id='LibexecFolder' Name='libexec'>
+              <Directory Id='GitCoreFolder' Name='git-core' />
+            </Directory>
+          </Directory>
+        </Directory>
       </Directory>
     </Directory>
   </Fragment>
