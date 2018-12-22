@@ -12,7 +12,7 @@
     <Feature Id='Git'>
       <Component Directory='INSTALLFOLDER'>
         <RegistryValue Root='HKLM' Key='Software\Git' Name='InstallFolder' Value='[INSTALLFOLDER]' Type='string' />
-        <Environment Id='UpdatePath' Name='PATH' Value='[dir6224ijVLx94XYG2KL6z4YR8qrrs]' Action='set' Part='last' System='yes' />
+        <Environment Id='UpdatePath' Name='PATH' Value='[BinFolder]' Action='set' Part='last' System='yes' />
       </Component>
 
       <Component Directory='INSTALLFOLDER'>
@@ -30,6 +30,7 @@
     <Directory Id='TARGETDIR' Name='SourceDir'>
       <Directory Id='ProgramFilesFolder' Name='PFiles'>
         <Directory Id='INSTALLFOLDER' Name='Git'>
+          <Directory Id='BinFolder' Name='bin' />
           <Directory Id='Mingw32Folder' Name='mingw32'>
             <Directory Id='LibexecFolder' Name='libexec'>
               <Directory Id='GitCoreFolder' Name='git-core' />

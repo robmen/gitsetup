@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:fg="http://www.firegiant.com/schemas/v3/wxs/fgwep.xsd">
   <Fragment>
-    <ComponentGroup Id='GitComponents' Directory='INSTALLFOLDER'>
-      <Component>
+    <ComponentGroup Id='GitComponents'>
+      <Component Directory='BinFolder'>
         <fg:HarvestFile Source='..\..\files\bin\git.exe' KeyIdentifier='git.exe' />
       </Component>
-      <Component>
+      <Component Directory='INSTALLFOLDER'>
         <fg:HarvestFolder Source='..\..\files\' Strategy='contentFileComponentsWithGeneratedKeyPath' />
       </Component>
     </ComponentGroup>
