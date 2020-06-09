@@ -3,7 +3,7 @@
   <Fragment>
     <ComponentGroup Id='GitComponents'>
       <Component Directory='BinFolder'>
-        <fg:HarvestFile Source='..\..\files\bin\git.exe' KeyIdentifier='git.exe' />
+        <fg:HarvestFile Source='..\..\files\bin\git.exe' Id='git.exe' />
       </Component>
       <Component Directory='INSTALLFOLDER'>
         <fg:HarvestFolder Source='..\..\files\' Strategy='contentFileComponentsWithGeneratedKeyPath' />
@@ -15,7 +15,7 @@
     <ComponentGroup Id='GitCredentialManager' Directory='GitCoreFolder'>
       <Component>
         <fg:HarvestFile Source='..\..\files\mingw32\libexec\git-core\git-credential-manager.exe'
-                        KeyIdentifier='CredManagerFile' />
+                        Id='CredManagerFile' />
       </Component>
     </ComponentGroup>
 
