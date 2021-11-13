@@ -3,7 +3,7 @@
   <Fragment>
     <ComponentGroup Id='GitComponents'>
       <Component Directory='BinFolder'>
-        <fg:HarvestFile Source='..\..\files\bin\git.exe' Id='git.exe' />
+        <fg:HarvestFile Id='git.exe' Source='..\..\files\bin\git.exe' />
       </Component>
       <Component Directory='INSTALLFOLDER'>
         <fg:HarvestFolder Source='..\..\files\' Strategy='contentFileComponentsWithGeneratedKeyPath' />
@@ -14,8 +14,7 @@
   <Fragment>
     <ComponentGroup Id='GitCredentialManager' Directory='GitCoreFolder'>
       <Component>
-        <fg:HarvestFile Source='..\..\files\mingw32\libexec\git-core\git-credential-manager.exe'
-                        Id='CredManagerFile' />
+        <fg:HarvestFile Id='CredManagerFile' Source='..\..\files\mingw32\libexec\git-core\git-credential-manager-core.exe' />
       </Component>
     </ComponentGroup>
 
@@ -23,7 +22,7 @@
   </Fragment>
 
   <Fragment>
-    <SetProperty Id='InstallGitCredentialManager' Value='"[#CredManagerFile]" config --global credential.helper manager'
+    <SetProperty Id='InstallGitCredentialManager' Value='"[#CredManagerFile]" configure --system'
                  Before='InstallGitCredentialManager' Sequence='execute' />
     <CustomAction Id='InstallGitCredentialManager' BinaryKey='WixCA' DllEntry='WixQuietExec'
                   Execute='deferred' Return='ignore' Impersonate='yes'/>
