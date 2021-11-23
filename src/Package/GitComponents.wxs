@@ -12,9 +12,9 @@
   </Fragment>
 
   <Fragment>
-    <ComponentGroup Id='GitCredentialManager' Directory='GitCoreFolder'>
+    <ComponentGroup Id='GitCredentialManager' Directory='Mingw32BinFolder'>
       <Component>
-        <fg:HarvestFile Id='CredManagerFile' Source='..\..\files\mingw32\libexec\git-core\git-credential-manager-core.exe' />
+        <fg:HarvestFile Id='CredManagerFile' Source='..\..\files\mingw32\bin\git-credential-manager-core.exe' />
       </Component>
     </ComponentGroup>
 

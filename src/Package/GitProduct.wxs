@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
      xmlns:dep='http://schemas.microsoft.com/wix/DependencyExtension'>
-  <Product Id='*' Name='Git on Windows' Language='1033' Manufacturer='RobMensching.com LLC'
+  <Product Id='*' Name='Git on Windows' Language='1033' Manufacturer='Rob Mensching'
                   Version='!(bind.fileVersion.git.exe)'
                   UpgradeCode='abbb3e1d-fea0-4b84-9585-b4dc13cbc1b4'>
     <Package InstallScope='perMachine' Compressed='yes' />
@@ -32,6 +32,7 @@
         <Directory Id='INSTALLFOLDER' Name='Git'>
           <Directory Id='BinFolder' Name='bin' />
           <Directory Id='Mingw32Folder' Name='mingw32'>
+            <Directory Id='Mingw32BinFolder' Name='bin' />
             <Directory Id='LibexecFolder' Name='libexec'>
               <Directory Id='GitCoreFolder' Name='git-core' />
             </Directory>
