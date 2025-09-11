@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:fg="http://www.firegiant.com/schemas/v3/wxs/fgwep.xsd">
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:fg="http://www.firegiant.com/schemas/v4/wxs/heatwave/buildtools">
   <Fragment>
     <ComponentGroup Id='GitComponents'>
       <Component Directory='BinFolder'>
         <fg:HarvestFile Id='git.exe' Source='..\..\files\bin\git.exe' />
       </Component>
       <Component Directory='INSTALLFOLDER'>
-        <fg:HarvestFolder Source='..\..\files\' Strategy='contentFileComponentsWithGeneratedKeyPath' />
+        <fg:HarvestFolder Source='..\..\files\' Strategy='contentFileComponentsWithGeneratedKeyPath'>
+          <fg:Exclude Files='..\..\files\etc\gitconfig' />
+        </fg:HarvestFolder>
       </Component>
     </ComponentGroup>
   </Fragment>
 
   <Fragment>
-    <ComponentGroup Id='GitCredentialManager' Directory='Mingw32BinFolder'>
+    <ComponentGroup Id='GitCredentialManager' Directory='Mingw64BinFolder'>
       <Component>
-        <fg:HarvestFile Id='CredManagerFile' Source='..\..\files\mingw32\bin\git-credential-manager-core.exe' />
+        <fg:HarvestFile Id='CredManagerFile' Source='..\..\files\mingw64\bin\git-credential-manager.exe' />
       </Component>
     </ComponentGroup>
 
@@ -24,13 +26,13 @@
   <Fragment>
     <SetProperty Id='InstallGitCredentialManager' Value='"[#CredManagerFile]" configure --system'
                  Before='InstallGitCredentialManager' Sequence='execute' />
-    <CustomAction Id='InstallGitCredentialManager' BinaryKey='WixCA' DllEntry='WixQuietExec'
+    <CustomAction Id='InstallGitCredentialManager' BinaryRef='Wix4UtilCA_X86' DllEntry='WixQuietExec64'
                   Execute='deferred' Return='ignore' Impersonate='yes'/>
 
     <PropertyRef Id="WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED" />
 
     <InstallExecuteSequence>
-        <Custom Action='InstallGitCredentialManager' Before='InstallFinalize'>NOT Installed AND WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED</Custom>
+        <Custom Action='InstallGitCredentialManager' Before='InstallFinalize' Condition='NOT Installed AND WIX_IS_NETFRAMEWORK_451_OR_LATER_INSTALLED' />
     </InstallExecuteSequence>
   </Fragment>
 </Wix>

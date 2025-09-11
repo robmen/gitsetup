@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <ProjectName Condition=" '$(ProjectName)' == '' ">$(MSBuildProjectName)</ProjectName>
+  </PropertyGroup>
+
+  <!-- Standard folders -->
+  <PropertyGroup>
+    <RootFolder>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\))</RootFolder>
+    <BuildRootFolder>$(RootFolder)build\</BuildRootFolder>
+    <BuildFolder>$(BuildRootFolder)</BuildFolder>
+    <BuildFolder Condition=" '$(BuildFolder)'!='' and !HasTrailingSlash('$(BuildFolder)') ">$(BuildFolder)\</BuildFolder>
+    <BuildConfigurationFolder>$(BuildFolder)\$(Configuration)\</BuildConfigurationFolder>
+    <IntermediateFolder>$(BuildFolder)obj\</IntermediateFolder>
+
+    <ArtifactsRootFolder Condition=" '$(ArtifactsRootFolder)' == '' ">$(BUILD_ARTIFACTSTAGINGDIRECTORY)</ArtifactsRootFolder>
+    <ArtifactsRootFolder Condition=" '$(ArtifactsRootFolder)' == '' ">$(BuildRootFolder)artifacts\$(Configuration)\</ArtifactsRootFolder>
+    <ArtifactsFolder>$(ArtifactsRootFolder)</ArtifactsFolder>
+    <ArtifactsFolder Condition=" '$(ArtifactsFolder)'!='' and !HasTrailingSlash('$(ArtifactsFolder)') ">$(ArtifactsFolder)\</ArtifactsFolder>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BaseOutputPath>$(BuildFolder)</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(IntermediateFolder)$(ProjectName)\</BaseIntermediateOutputPath>
+    <OutputPath>$(BaseOutputPath)$(Configuration)\$(ProjectName)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <Import Project="Directory$(MSBuildProjectExtension).props" Condition=" Exists('Directory$(MSBuildProjectExtension).props') " />
+</Project>

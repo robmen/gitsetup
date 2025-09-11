@@ -1,31 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:fg="http://www.firegiant.com/schemas/v3/wxs/fgwep.xsd">
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:fg="http://www.firegiant.com/schemas/v4/wxs/heatwave/buildtools">
   <Fragment>
         <ComponentGroup Id="GitPoshComponents" Directory="GitPoshFolder">
             <Component>
-              <fg:HarvestFile Source='..\..\lib\posh-git\src\posh-git.psm1' />
-              <Environment Id='UpdatePSModulePath' Name='PSModulePath' Value='[GitPowershellModulesFolder]' Action='set' Part='last' System='yes' />
+              <fg:HarvestFile Source="..\..\lib\posh-git\src\posh-git.psm1" />
+              <Environment Id="UpdatePSModulePath" Name="PSModulePath" Value="[GitPowershellModulesFolder]" Action="set" Part="last" System="yes" />
             </Component>
             <Component>
-              <fg:HarvestFolder Source='..\..\lib\posh-git\src\' />
+              <fg:HarvestFolder Source="..\..\lib\posh-git\src\" />
             </Component>
             <Component>
-                <File Source="posh-git\LICENSE.txt" />
+                <File Id="LICENSE.txt" Source="posh-git\LICENSE.txt" />
             </Component>
             <Component>
-                <File Source="posh-git\profile.example.ps1" />
+                <File Id="profile.example.ps1" Source="posh-git\profile.example.ps1" />
             </Component>
             <Component>
-                <File Source="posh-git\README.md" />
+                <File Id="README.md" Source="posh-git\README.md" />
             </Component>
         </ComponentGroup>
     </Fragment>
 
     <Fragment>
-        <DirectoryRef Id='INSTALLFOLDER'>
-            <Directory Id='GitPowershellFolder' Name='Powershell'>
-                <Directory Id='GitPowershellModulesFolder' Name='Modules'>
-                    <Directory Id='GitPoshFolder' Name='posh-git' />
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="GitPowershellFolder" Name="Powershell">
+                <Directory Id="GitPowershellModulesFolder" Name="Modules">
+                    <Directory Id="GitPoshFolder" Name="posh-git" />
                 </Directory>
             </Directory>
         </DirectoryRef>

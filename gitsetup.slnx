@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="src/Bundle/Bundle.wixproj">
+    <Platform Solution="Debug|x64" Project="x64" />
+    <Build />
+  </Project>
+  <Project Path="src/Package/Package.wixproj">
+    <Platform Solution="Debug|x64" Project="x64" />
+    <Build />
+  </Project>
+</Solution>
